@@ -143,12 +143,14 @@ function kyoikuto() {
 
 //search.html ルーティング
 
+var map;
+
 
   function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
     var btn = document.getElementById('btn');
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
       zoom: 17,
       center: {
         lat: 35.154639,
@@ -175,6 +177,11 @@ function kyoikuto() {
     }else{
       calculateAndDisplayRoute(directionsService, directionsRenderer);
     }
+
+    // 現在地の表示のための初期化
+    initCurrentPosition();
+    // 現在地を1000m秒ごとに更新
+    setInterval(updateCurrentPosition, 1000);
 
       if(marker){
         marker.setMap(null);
@@ -313,4 +320,45 @@ function kyoikuto() {
       }
     });
 
+  }
+
+
+
+  // 現在位置の表示
+  var currentPosition;
+  function initCurrentPosition() {
+    console.log("Init current position")
+    // 半径10mの円で現在位置を表示
+    currentPosition = new google.maps.Circle({
+      map: map,
+      radius: 10
+    });
+  }
+
+  function updateCurrentPosition() {
+    // console.log("Update current position");
+      // Try HTML5 geolocation.
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+          currentPosition.setCenter(pos);
+        }, function() {
+          // 位置情報が取得できなかった場合の処理
+          // 名古屋大学駅の位置をセット
+          var pos = {
+            lat: 35.1547342,
+            lng: 136.9665566
+          };
+
+          currentPosition.setCenter(pos);
+          // handleLocationError(true, infoWindow, map.getCenter());
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
   }
