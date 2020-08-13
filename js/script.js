@@ -181,7 +181,7 @@ var map;
     // 現在地の表示のための初期化
     initCurrentPosition();
     // 現在地を1000m秒ごとに更新
-    setInterval(updateCurrentPosition, 1000);
+    setInterval(updateCurrentPosition, 100);
 
       if(marker){
         marker.setMap(null);
@@ -331,7 +331,12 @@ var map;
     // 半径10mの円で現在位置を表示
     currentPosition = new google.maps.Circle({
       map: map,
-      radius: 10
+      radius: 2,	// 半径（m）
+    	fillColor:"#00BFFF" , 		// 塗りつぶし色
+    	fillOpacity: 0.5,		// 塗りつぶし透過度（0: 透明 ⇔ 1:不透明）
+    	strokeColor: "#00BFFF",		// 外周色
+    	strokeOpacity: 1.0,	// 外周透過度（0: 透明 ⇔ 1:不透明）
+    	strokeWeight: 10		// 外周太さ
     });
   }
 
