@@ -181,7 +181,7 @@ var map;
     // 現在地の表示のための初期化
     initCurrentPosition();
     // 現在地を1000m秒ごとに更新
-    setInterval(updateCurrentPosition, 100);
+    setInterval(updateCurrentPosition, 50);
 
       if(marker){
         marker.setMap(null);
