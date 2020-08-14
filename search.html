@@ -93,7 +93,8 @@
             <div style="color:#fff;"class="nav_sp_top"><a href="#"></a></div>
             <ul class="clearfix">
               <li><a id="label1" href="intro.html">NU-Mapsとは</a></li>
-              <li><a id="label2" href="contact.html">お問い合わせ</a></li>
+              <li><a onclick="javascript:alert1()">お問い合わせ</a></li>
+              <!--<li><a id="label2" href="contact.html">お問い合わせ</a></li>-->
               <!--<li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>-->
               <li><a id="label4" href="index.html">名大IDでログイン</a></li>
               <li><a id="label4" href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></li>
@@ -197,30 +198,14 @@
     }
 
     function clickBtn2(){
-      //var end = document.getElementById('building').value;
       const p1 = document.getElementById("floating-panel");
-      //if(end == ""){
-        //alert('目的地が選択されていません。')
-      //}else if(end == "-"){
-        //alert('No destination selected')
-      //}else{
       if(p1.style.display=="block"){
-        // noneで非表示
-      //  p1.style.display ="none";
         location.href = "index.html";
       }else{
-        // blockで表示
-        //p1.style.display ="block";
         location.href = "search.html";
       }
     }
-      //if(p1.style.display=="block"){
-        //location.href = "index.html";
-    //  }else{
-        // blockで表示
-      //  location.href = "search.html";
-      //}
-  //}
+
       </script>
 
       <script>
@@ -256,6 +241,10 @@
 
 
       	return true;
+      }
+
+      function alert1(){
+        alert("お問い合わせ機能実装予定")
       }
       </script>
 
