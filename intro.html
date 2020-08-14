@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -25,7 +24,35 @@
     <script type="text/javascript" src="hum_icon.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
 
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #floating-panel {
+        width: 100%;
+        background: #4ad5ff;
+
+
+
+
+      }
+  #floating-panel:before {
+
+}
+
+
+      }
 
     </style>
 
@@ -38,17 +65,14 @@
       <nav style="　background-color: #fff;">
 
         <div style="text-align:center;">
-        <a href="javascript:history.back()">
+          <a href="search.html">
           <div id="back">
             ＜
           </div>
-        </a>
-          <div id="hamburger">
-            <div class="icon-animation type-1">
-              <span class="top"></span>
-              <span class="middle"></span>
-              <span class="bottom"></span>
-            </div>
+         </a>
+         <a href="search.html">
+          <div id="back2">
+            ×
           </div>
           <div class="nav_sp">
             <div style="color:#fff;"class="nav_sp_top"><a href="#"></a></div>
@@ -69,33 +93,67 @@
 
   </header>
 
-    <body style="background-color: #4BACBB;font-size:22px;color:#fff;">
-    <div style="text-align: center;">
-    <div style="margin-top: 30px;">全学教育棟</div>
-    <div style="margin-top: 4px;">(本館)</div>
-  </div>
-  　
-  <div style="text-align:center;">
-  <div>1階　　　　　　　　　　　　　　</div>
-  <img style="margin-top: 0px;"src="images/zenngaku1.png" width="349px;"height="490px;">
- </div>
+    <body style="background-color: #4BACBB;">
+      <div style="text-align:center;margin-top: 30px;font-size:19px;color:#fff;">
+        名古屋大学の建物や教室の場所を
+      </div>
+      <div style="text-align:center;font-size:19px;color:#fff;">
+        検索できるアプリです。
+      </div>
+      <div style="text-align:center;font-size:19px;color:#fff;">
+        以下追加説明
+      </div>
 
- <div style="text-align:center;margin-top: 50px;">
-  <div>2階　　　　　　　　　　　　　　</div>
- <img style="margin-top: 0px;"src="images/zenngaku2.png" width="349px;"height="490px;">
- </div>
-
- <div style="text-align:center;margin-top: 50px;">
- <div>3階　　　　　　　　　　　　　　</div>
- <img style="margin-top: 0px;"src="images/zenngaku3.png" width="349px;"height="490px;">
-</div>
-
-<div style="text-align:center;margin-top: 50px;">
-<div>4階　　　　　　　　　　　　　　</div>
-<img style="margin-top: 0px;"src="images/zenngaku4.png" width="349px;"height="490px;">
-</div>
+      </div>
 
 
+
+
+
+
+
+
+      <script>
+      function testSelect() {
+
+      	if (document.getElementById("labelCode_2").value == '999') {
+      		document.getElementById("labelCode_2").value = '000';
+      		document.getElementById("label1").innerText = 'お知らせ';
+          document.getElementById("label2").innerText = 'NU-Mapsの使い方';
+          document.getElementById("label3").innerText = '言語/Language';
+          document.getElementById("label4").innerText = 'ログイン';
+          document.getElementById("label5").innerText = '現在地';
+          document.getElementById("label6").innerText = '目的地';
+          document.getElementById("building").value = '';
+          document.getElementById("room").value = '';
+          document.getElementById("start").value = '名古屋大学駅';
+          document.getElementById("label10").innerText = '検索';
+
+      	} else {
+      		document.getElementById("labelCode_2").value = '999';
+      		document.getElementById("label1").innerText = 'News';
+          document.getElementById("label2").innerText = 'How to use NU-Maps';
+          document.getElementById("label3").innerText = '言語/Language';
+          document.getElementById("label4").innerText = 'Login';
+          document.getElementById("label5").innerText = 'Present location';
+          document.getElementById("label6").innerText = 'Destination';
+          document.getElementById("building").value = '-';
+          document.getElementById("room").value = '-';
+          document.getElementById("start").value = '名古屋大学駅/';
+          document.getElementById("label10").innerText = 'Search';
+
+      	}
+
+
+      	return true;
+      }
+      </script>
+
+
+
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
+      </script>
       <script>
         <!-- service workerの登録関係
         -->

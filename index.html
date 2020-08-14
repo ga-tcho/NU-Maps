@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ja">
 
   <head>
@@ -31,18 +31,31 @@
     <body style="background-color:#4BACB8;">
     <div id="labelCode_1" tabindex="-1" value="000"></div>
     <div style="text-align:center;">
-    <img style="margin-top: 80px;"src="images/111.png" width="200px;"height="235px;">
+    <img style="margin-top: 80px;"src="images/1111.png" width="200px;"height="235px;">
    </div>
+      <div style="background-color:#1C9BB2;margin-top:35px; margin-left:10px; margin-right:10px; border:solid;border-width: 1px; border-color:#fff;height:42px;border-top-left-radius: 10px;border-bottom-left-radius: 0px;border-top-right-radius: 10px;border-bottom-right-radius: 0px;">
+        <div style="text-align:center;">
+          <div id="label5"style="font-size:22px;margin-top: 4px;color:#fff;">NU-Maps とは</div>
+        </div>
+      </div>
+      <div style="background-color:#1C9BB2;margin-top:-1px; margin-left:10px; margin-right:10px; border:solid;border-width: 1px; border-color:#fff;height:81px;border-top-left-radius: 0px;border-bottom-left-radius: 10px;border-top-right-radius: 0px;border-bottom-right-radius: 10px;">
+        <div style="text-align:center;">
+          <div id="label6"style="font-size:22px;margin-top: 4px;color:#fff;">名古屋大学の建物や教室の場所を</div>
+        </div>
+        <div style="text-align:center;">
+          <div id="label7"style="font-size:22px;margin-top: 0px;color:#fff;">検索できるアプリです。</div>
+        </div>
+      </div>
+      </div>
 
-      <div style="margin-top:65px; margin-left:10px; margin-right:10px; border:solid;border-width: 1px; border-color:#fff;height:261px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
-
+      <div style="background-color:#1C9BB2;margin-top:15px; margin-left:10px; margin-right:10px; border:solid;border-width: 1px; border-color:#fff;height:261px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
         <div style="background-color:#0088A3;margin-top:18px;margin-left: 15px;margin-right: 15px;border:solid;border-width: 2.5px; border-color:#fff;height:89px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
         </div>
-        <a href="search3.php">
+
         <div style="text-align:center;">
-          <div id="label1"style="font-size:22px;margin-top: -60px;color:#fff;">名大IDでログイン</div>
+          <div id="label1"style="font-size:22px;margin-top: -60px;color:#fff;"onClick="alert1();">名大IDでログイン</div>
         </div>
-      </a>
+
         <div style="text-align:center;">
           <div id="label2"style="font-size:22px;margin-top:37px;color:#fff;">もしくは</div>
         </div>
@@ -74,12 +87,19 @@
           document.getElementById("label2").innerText = 'もしくは';
           document.getElementById("label3").innerText = 'ログイン無しで利用';
           document.getElementById("label4").innerText = '※機能制限あり';
+          document.getElementById("label5").innerText = 'NU-Mapsとは';
+          document.getElementById("label6").innerText = '名古屋大学の建物や教室に場所を';
+          document.getElementById("label7").innerText = '検索できるアプリです。';
       	  } else {
       		document.getElementById("labelCode_1").value = '999';
       		document.getElementById("label1").innerText = 'Log in with your NU ID';
           document.getElementById("label2").innerText = 'or';
           document.getElementById("label3").innerText = 'Use without login';
-          document.getElementById("label4").innerText = '※Limited functionality';}
+          document.getElementById("label4").innerText = '※Limited functionality';
+          document.getElementById("label5").innerText = 'What is NU-Maps';
+          document.getElementById("label6").innerText = 'This app can search the location';
+          document.getElementById("label7").innerText = 'of NU buildings and classrooms';
+        }
         }
 
 
@@ -91,6 +111,12 @@
             window.location.href = 'search.html';}
           }
 
+        function alert1(){
+          alert("Cas認証実装予定")
+            }
+        function alert2(){
+          alert("お問い合わせ機能実装予定")
+            }
         </script>
 
         <script>

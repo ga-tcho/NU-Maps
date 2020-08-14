@@ -73,8 +73,15 @@
 
     <header style="background-color: #4BACBB;">
 
+
       <nav style="　background-color: #fff;">
+
         <div style="text-align:center;">
+          <div onclick="clickBtn2()">
+          <div id="back">
+            ＜
+          </div>
+        </div>
           <div id="hamburger">
             <div class="icon-animation type-1">
               <span class="top"></span>
@@ -85,19 +92,22 @@
           <div class="nav_sp">
             <div style="color:#fff;"class="nav_sp_top"><a href="#"></a></div>
             <ul class="clearfix">
-              <li><a id="label1" href="index.html">お知らせ</a></li>
-              <li><a id="label2" href="#">NU-Mapsの使い方</a></li>
-              <li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>
-              <li><a id="label4" href="login.php?">ログイン</a></li>
+              <li><a id="label1" href="intro.html">NU-Mapsとは</a></li>
+              <li><a id="label2" href="contact.html">お問い合わせ</a></li>
+              <!--<li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>-->
+              <li><a id="label4" href="index.html">名大IDでログイン</a></li>
+              <li><a id="label4" href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></li>
             </ul>
             </div>
           <div id="wrapper"></div>
 
-          <a style="font-family:arial block; color:#fff;font-size: 40px;" href="index.html">NU Maps</a>
+        <a style="font-family:arial block; color:#fff;font-size: 40px;" href="index.html">NU Maps</a>
         </div>
+
       </nav>
 
   </header>
+
     <body>
       <div id="labelCode_2"  value="100"></div>
 
@@ -185,6 +195,32 @@
       	}
       }
     }
+
+    function clickBtn2(){
+      //var end = document.getElementById('building').value;
+      const p1 = document.getElementById("floating-panel");
+      //if(end == ""){
+        //alert('目的地が選択されていません。')
+      //}else if(end == "-"){
+        //alert('No destination selected')
+      //}else{
+      if(p1.style.display=="block"){
+        // noneで非表示
+      //  p1.style.display ="none";
+        location.href = "index.html";
+      }else{
+        // blockで表示
+        //p1.style.display ="block";
+        location.href = "search.html";
+      }
+    }
+      //if(p1.style.display=="block"){
+        //location.href = "index.html";
+    //  }else{
+        // blockで表示
+      //  location.href = "search.html";
+      //}
+  //}
       </script>
 
       <script>
