@@ -203,11 +203,11 @@ var map;
     //  if (document.getElementById("labelCode_2").value == '999')
     if(room == "C10") {
         var box = '<div class="box">' +
-              '<a href="mapC11.html">建物内表示</a>' +
+              '<a href="mapC10.html">建物内表示</a>' +
           '</div>'
         } else if (room == "C11"){
         var box = '<div class="box">' +
-              '<a href="mapC12.html">建物内表示</a>' +
+              '<a href="mapC11.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C12"){
         var box = '<div class="box">' +
