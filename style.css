@@ -1,8 +1,204 @@
+
+
+/*common*------------------------------------------------*/
 html {
   width: 100%;
   height: 100%;
 }
 
+header{
+  background-color: #4BACBB;
+}
+
+nav div{
+  text-align: center;
+}
+
+nav div a{
+  font-family:arial block; color:#fff;font-size: 40px;
+}
+
+/*index.thml----------------------------------------------*/
+.indexbody{
+  background-color:#4BACB8;
+}
+
+.displaylogo{
+  text-align:center;
+}
+.logo{
+  margin-top: 80px;
+}
+
+.intro{
+  background-color:#1C9BB2;
+  margin-top:35px;
+  margin-left:10px;
+  margin-right:10px;
+  border:solid;border-width: 1px;
+  border-color:#fff;
+  height:42px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0px;
+}
+
+.intro div{
+  text-align:center;
+}
+
+.intro div div{
+  font-size:22px;
+  margin-top: 4px;
+  color:#fff;
+}
+
+.intro_script{
+  background-color:#1C9BB2;
+  margin-top:-1px;
+  margin-left:10px;
+  margin-right:10px;
+  border:solid;border-width: 1px;
+  border-color:#fff;height:81px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 10px;
+}
+
+.intro_script div{
+  text-align: center;
+}
+
+#label6{
+  font-size:22px;margin-top: 4px;color:#fff;
+}
+
+#label7{
+  font-size:22px;margin-top: 0px;color:#fff;
+}
+
+.frame{
+  background-color:#1C9BB2;
+  margin-top:15px;
+  margin-left:10px;
+  margin-right:10px;
+  border:solid;border-width: 1px;
+  border-color:#fff;
+  height:261px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.frame div{
+  text-align: center;
+}
+
+.frame div div{
+  font-size:22px;margin-top:18px;color:#fff;
+}
+
+.log_frame{
+  background-color:#0088A3;
+  margin-top:18px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border:solid;border-width: 2.5px;
+  border-color:#fff;
+  height:89px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.nlog_frame{
+  background-color:#0088A3;margin-top:10px;margin-left: 15px;margin-right: 15px;border:solid;border-width: 2.5px; border-color:#fff;height:52px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;
+}
+
+#label1{
+  font-size:22px;margin-top: -60px;color:#fff;
+}
+
+#label2{
+  font-size:22px;margin-top:37px;color:#fff;
+}
+
+#label3{
+  font-size:22px;margin-top: -43px;color:#fff;
+}
+
+.change_lang{
+  margin-top:20px;margin-left: 184px;margin-right: 18px;border:solid;border-width: 2.5px; border-color:#fff;height:33px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;
+}
+
+.change_lang div{
+  font-size:22px;margin-left:5px;margin-top: -3px;color:#fff;
+}
+
+/*search.html------------------------------------------*/
+
+#map {
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#floating-panel {
+  background-image : url(images/4.jpg);
+  height:100%;
+  width: 100%;
+ }
+
+ .present{
+   font-size: 22px;height:100px; background-color:#fcfcfc ;  margin-top: 44px;
+ }
+
+ .present_script{
+   font-size: 22px; margin-top: -92px;margin-bottom: 7px;color:#4BACBB;
+ }
+
+
+ .present_selec{
+   margin-right:10px;margin-left:10px;
+ }
+
+.destination{
+  font-size: 22px;height:150px; background-color:#fcfcfc ;  margin-top: 50px;
+}
+ .destination_script{
+  text-align: center;
+ }
+
+.destination_selec{
+  margin-right:10px;margin-left:10px;
+}
+
+.room_selec{
+  margin-top:12px;margin-right:10px;margin-left:10px;
+}
+
+.search{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*hum-icon----------------------------------------------------*/
 #wrapper {
   width: 100%;
   height: 100%;

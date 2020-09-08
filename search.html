@@ -24,37 +24,7 @@
     <script type="text/javascript" src="hum_icon.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="manifest" href="manifest.json">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
 
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      #floating-panel {
-        width: 100%;
-
-
-
-
-
-      }
-  #floating-panel:before {
-
-}
-
-
-      }
-
-    </style>
     <script>
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
     function successCallback(position) {
@@ -70,18 +40,14 @@
 </script>
   </head>
 
-
-    <header style="background-color: #4BACBB;">
-
-
-      <nav style="　background-color: #fff;">
-
-        <div style="text-align:center;">
+    <header>
+      <nav>
+        <div>
           <div onclick="clickBtn2()">
           <div id="back">
             ＜
           </div>
-        </div>
+          </div>
           <div id="hamburger">
             <div class="icon-animation type-1">
               <span class="top"></span>
@@ -101,39 +67,31 @@
             </ul>
             </div>
           <div id="wrapper"></div>
-
-        <a style="font-family:arial block; color:#fff;font-size: 40px;" href="index.html">NU Maps</a>
+          <a href="index.html">NU Maps</a>
         </div>
-
       </nav>
-
   </header>
 
     <body>
-      <div id="labelCode_2"  value="100"></div>
-
-      <div style="background-image : url(images/4.jpg); height:100%;" id="floating-panel">
-        <div
-         style="font-size: 22px;height:100px; background-color:#fcfcfc ;  margin-top: 44px;">
-
+      <div id="labelCode_2" value="100"></div>
+      <div id="floating-panel">
+        <div class="present">
         </div>
-        <div style="text-align: center;">
-          <div id="label5" style="font-size: 22px; margin-top: -92px;margin-bottom: 7px;color:#4BACBB;">出発地</div>
+        <div class="present_script"style="text-align: center;">
+          <div id="label5">出発地</div>
         </div>
-        <div style="margin-right:10px;margin-left:10px;">
+        <div class="present_selec">
         <select style="margin-right:15px;border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="start" name="building">
           <option value="名古屋大学駅">現在地</option>
           <option value="現在地">Present location</option>
         </select>
        </div>
-            <div
-             style="font-size: 22px;height:150px; background-color:#fcfcfc ;  margin-top: 50px;  ">
-
+            <div class="destination">
             </div>
-            <div style="text-align: center;">
+            <div class="destination_script"style="text-align: center;">
               <div id="label6" style="font-size: 22px; margin-top: -140px;margin-bottom: 7px;color:#4BACBB; ">目的地</div>
             </div>
-            <div style="margin-right:10px;margin-left:10px;">
+            <div class="destination_selec">
             <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"id="building" class="custom-select">
               <option value="">建物名を選択してください</option>
               <option value="全学教育棟本館">全学教育棟本館</option>
@@ -150,25 +108,18 @@
               <option value="-">Please select a building name</option>
             </select>
             </div>
-            <div style="margin-top:12px;margin-right:10px;margin-left:10px;">
+            <div class="room_selec">
             <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="room" name="room">
               <option value="">部屋名を選択してください</option>
               <option value="-">Please select a room name</option>
             </select>
             </div>
-            <div style="text-align:center;">
+            <div class="search">
               <button id="btn" style="background-color:#4BACBB; width:250px;margin-top:60px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
                 <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
               </button>
             </div>
-</div>
-  </div>
-      <!--<div id="right-panel"<button id="btn" style="background-color:#ffffff; width:160px;" type="button" class="btn btn-secondary btn-lg" onclick="clickBtn1()">
-        <div style="color:#00bfff;">検索</div>
-      </button>></div>-->
-
-
-
+        </div>
 
       <div id="map"></div>
       <div id="lat" value=""></div>
