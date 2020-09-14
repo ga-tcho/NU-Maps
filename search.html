@@ -8,7 +8,11 @@
     <title>NU Maps</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
+    <!-- フォント -->
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
     <script src="js/jquery-1.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
@@ -45,7 +49,7 @@
         <div>
           <div onclick="clickBtn2()">
           <div id="back">
-            ＜
+            <img src="images/icon/back-white.png" width="80%"/>
           </div>
           </div>
           <div id="hamburger">
@@ -67,7 +71,7 @@
             </ul>
             </div>
           <div id="wrapper"></div>
-          <a href="index.html">NU Maps</a>
+          <a href="index.html" class="title">NU Maps</a>
         </div>
       </nav>
   </header>
@@ -78,7 +82,7 @@
         <div class="present">
         </div>
         <div class="present_script"style="text-align: center;">
-          <div id="label5">出発地</div>
+          <div id="label5" class="search-title">出発地</div>
         </div>
         <div class="present_selec">
         <select style="margin-right:15px;border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="start" name="building">
@@ -89,7 +93,7 @@
             <div class="destination">
             </div>
             <div class="destination_script"style="text-align: center;">
-              <div id="label6" style="font-size: 22px; margin-top: -140px;margin-bottom: 7px;color:#4BACBB; ">目的地</div>
+              <div id="label6" style="font-size: 22px; margin-top: -140px;margin-bottom: 7px;color:#4BACBB; " class="search-title">目的地</div>
             </div>
             <div class="destination_selec">
             <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"id="building" class="custom-select">
@@ -116,7 +120,7 @@
             </div>
             <div class="search">
               <button id="btn" style="background-color:#4BACBB; width:250px;margin-top:60px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
-                <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
+                <div id="label10" style="font-size: 22px;color:#fff;" class="search-title">検索</div>
               </button>
             </div>
         </div>
