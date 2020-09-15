@@ -1,237 +1,237 @@
 <!DOCTYPE html>
 <html lang="ja">
-
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NU Maps</title>
     <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- フォント -->
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet" />
     <script src="js/jquery-1.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- ホーム画面に表示されるアプリ名 -->
-    <meta name="apple-mobile-web-app-title" content="NU-Maps">
+    <meta name="apple-mobile-web-app-title" content="NU-Maps" />
     <!-- ホーム画面に表示されるアプリアイコン -->
-    <link rel="apple-touch-icon" href="images/img.png">
+    <link rel="apple-touch-icon" href="images/img.png" />
     <script type="text/javascript" src="hum_icon.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
 
     <script>
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-    function successCallback(position) {
-      $('#lat').val(String(position.coords.latitude));
-      $('#log').val(String(position.coords.longitude));
-    }
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+      function successCallback(position) {
+        $('#lat').val(String(position.coords.latitude));
+        $('#log').val(String(position.coords.longitude));
+      }
 
-    function errorCallback(error) {
-      alert("名古屋大学駅を始点にします")
-      $('#error').val("error");
-
-    }
-</script>
+      function errorCallback(error) {
+        alert('名古屋大学駅を始点にします');
+        $('#error').val('error');
+      }
+    </script>
   </head>
 
-    <header>
-      <nav>
-        <div>
-          <div onclick="clickBtn2()">
+  <header>
+    <nav>
+      <div>
+        <div onclick="clickBtn2()">
           <div id="back">
-            ＜
+            <img src="images/icon/back-white.png" width="80%" />
           </div>
-          </div>
-          <div id="hamburger">
-            <div class="icon-animation type-1">
-              <span class="top"></span>
-              <span class="middle"></span>
-              <span class="bottom"></span>
-            </div>
-          </div>
-          <div class="nav_sp">
-            <div style="color:#fff;"class="nav_sp_top"><a href="#"></a></div>
-            <ul class="clearfix">
-              <li><a id="label1" href="intro.html">NU-Mapsとは</a></li>
-              <li><a href="contact.html">お問い合わせ</a></li>
-              <!--<li><a id="label2" href="contact.html">お問い合わせ</a></li>-->
-              <!--<li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>-->
-              <li><a id="label4" href="index.html">名大IDでログイン</a></li>
-              <li><a id="label4" href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></li>
-            </ul>
-            </div>
-          <div id="wrapper"></div>
-          <a href="index.html">NU Maps</a>
         </div>
-      </nav>
+        <div id="hamburger">
+          <div class="icon-animation type-1">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+          </div>
+        </div>
+        <div class="nav_sp">
+          <div style="color: #fff" class="nav_sp_top"><a href="#"></a></div>
+          <ul class="clearfix">
+            <li><a id="label1" href="intro.html">NU-Mapsとは</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <!--<li><a id="label2" href="contact.html">お問い合わせ</a></li>-->
+            <!--<li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>-->
+            <li><a id="label4" href="index.html">名大IDでログイン</a></li>
+            <li><a id="label4" href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></li>
+          </ul>
+        </div>
+        <div id="wrapper"></div>
+        <a href="index.html" class="title">NU Maps</a>
+      </div>
+    </nav>
   </header>
 
-    <body>
-      <div id="labelCode_2" value="100"></div>
-      <div id="floating-panel">
-        <div class="present">
-        </div>
-        <div class="present_script"style="text-align: center;">
-          <div id="label5">出発地</div>
-        </div>
-        <div class="present_selec">
-        <select style="margin-right:15px;border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="start" name="building">
+  <body>
+    <div id="labelCode_2" value="100"></div>
+    <div id="floating-panel">
+      <div class="present"></div>
+      <div class="present_script" style="text-align: center">
+        <div id="label5" class="search-title">出発地</div>
+      </div>
+      <div class="present_selec">
+        <select
+          style="margin-right: 15px; border-top-left-radius: 6px; border-bottom-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px"
+          class="custom-select"
+          id="start"
+          name="building"
+        >
           <option value="名古屋大学駅">現在地</option>
           <option value="現在地">Present location</option>
         </select>
-       </div>
-            <div class="destination">
-            </div>
-            <div class="destination_script"style="text-align: center;">
-              <div id="label6" style="font-size: 22px; margin-top: -140px;margin-bottom: 7px;color:#4BACBB; ">目的地</div>
-            </div>
-            <div class="destination_selec">
-            <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"id="building" class="custom-select">
-              <option value="">建物名を選択してください</option>
-              <option value="全学教育棟本館">全学教育棟本館</option>
-              <option value="全学教育棟A館">全学教育棟A館</option>
-              <option value="名古屋大学 文系総合館">文系総合館</option>
-              <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
-              <option value="名古屋大学本部学務部 教養教育院全学教育教務掛">教養教育院全学教育教務課</option>
-              <option value="名古屋大学 生協北部食堂">生協北部食堂</option>
-              <option value="名古屋大学 生協南部書籍店">生協南部書籍店</option>
-              <option value="豊田講堂">豊田講堂</option>
-              <option value="名古屋大学 博物館">名古屋大学 博物館</option>
-              <option value="ナショナルイノベーションコンプレックス">NIC</option>
-              <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
-              <option value="-">Please select a building name</option>
-            </select>
-            </div>
-            <div class="room_selec">
-            <select style="border-top-left-radius: 6px;border-bottom-left-radius: 6px;border-top-right-radius: 6px;border-bottom-right-radius: 6px;"class="custom-select" id="room" name="room">
-              <option value="">部屋名を選択してください</option>
-              <option value="-">Please select a room name</option>
-            </select>
-            </div>
-            <div class="search">
-              <button id="btn" style="background-color:#4BACBB; width:250px;margin-top:60px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;" type="button" class="btn btn-outline-light"onclick="clickBtn1()">
-                <div id="label10" style="font-size: 22px;color:#fff;">検索</div>
-              </button>
-            </div>
-        </div>
+      </div>
+      <div class="destination"></div>
+      <div class="destination_script" style="text-align: center">
+        <div id="label6" style="font-size: 22px; margin-top: -140px; margin-bottom: 7px; color: #4bacbb" class="search-title">目的地</div>
+      </div>
+      <div class="destination_selec">
+        <select style="border-top-left-radius: 6px; border-bottom-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px" id="building" class="custom-select">
+          <option value="">建物名を選択してください</option>
+          <option value="全学教育棟本館">全学教育棟本館</option>
+          <option value="全学教育棟A館">全学教育棟A館</option>
+          <option value="名古屋大学 文系総合館">文系総合館</option>
+          <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
+          <option value="名古屋大学本部学務部 教養教育院全学教育教務掛">教養教育院全学教育教務課</option>
+          <option value="名古屋大学 生協北部食堂">生協北部食堂</option>
+          <option value="名古屋大学 生協南部書籍店">生協南部書籍店</option>
+          <option value="豊田講堂">豊田講堂</option>
+          <option value="名古屋大学 博物館">名古屋大学 博物館</option>
+          <option value="ナショナルイノベーションコンプレックス">NIC</option>
+          <option value="ファミリーマート 名古屋大学店">Lファミリーマート 名古屋大学店</option>
+          <option value="-">Please select a building name</option>
+        </select>
+      </div>
+      <div class="room_selec">
+        <select style="border-top-left-radius: 6px; border-bottom-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px" class="custom-select" id="room" name="room">
+          <option value="">部屋名を選択してください</option>
+          <option value="-">Please select a room name</option>
+        </select>
+      </div>
+      <div class="search">
+        <button
+          id="btn"
+          style="background-color: #4bacbb; width: 250px; margin-top: 60px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px"
+          type="button"
+          class="btn btn-outline-light"
+          onclick="clickBtn1()"
+        >
+          <div id="label10" style="font-size: 22px; color: #fff" class="search-title">検索</div>
+        </button>
+      </div>
+    </div>
 
-      <div id="map"></div>
-      <div id="lat" value=""></div>
-      <div id="log" value=""></div>
-      <div id="error" value=""></div>
+    <div id="map"></div>
+    <div id="lat" value=""></div>
+    <div id="log" value=""></div>
+    <div id="error" value=""></div>
 
-      <script>
+    <script>
       //初期表示は非表示
-      document.getElementById("floating-panel").style.display ="block";
+      document.getElementById('floating-panel').style.display = 'block';
 
-      function clickBtn1(){
+      function clickBtn1() {
         var end = document.getElementById('building').value;
-      	const p1 = document.getElementById("floating-panel");
-        if(end == ""){
-          alert('目的地が選択されていません。')
-        }else if(end == "-"){
-          alert('No destination selected')
-        }else{
-      	if(p1.style.display=="block"){
-      		// noneで非表示
-      		p1.style.display ="none";
-      	}else{
-      		// blockで表示
-      		p1.style.display ="block";
-      	}
-      }
-    }
-
-    function clickBtn2(){
-      const p1 = document.getElementById("floating-panel");
-      if(p1.style.display=="block"){
-        location.href = "index.html";
-      }else{
-        location.href = "search.html";
-      }
-    }
-
-      </script>
-
-      <script>
-      function testSelect() {
-
-      	if (document.getElementById("labelCode_2").value == '999') {
-      		document.getElementById("labelCode_2").value = '000';
-      		document.getElementById("label1").innerText = 'お知らせ';
-          document.getElementById("label2").innerText = 'NU-Mapsの使い方';
-          document.getElementById("label3").innerText = '言語/Language';
-          document.getElementById("label4").innerText = 'ログイン';
-          document.getElementById("label5").innerText = '現在地';
-          document.getElementById("label6").innerText = '目的地';
-          document.getElementById("building").value = '';
-          document.getElementById("room").value = '';
-          document.getElementById("start").value = '名古屋大学駅';
-          document.getElementById("label10").innerText = '検索';
-
-      	} else {
-      		document.getElementById("labelCode_2").value = '999';
-      		document.getElementById("label1").innerText = 'News';
-          document.getElementById("label2").innerText = 'How to use NU-Maps';
-          document.getElementById("label3").innerText = '言語/Language';
-          document.getElementById("label4").innerText = 'Login';
-          document.getElementById("label5").innerText = 'Present location';
-          document.getElementById("label6").innerText = 'Destination';
-          document.getElementById("building").value = '-';
-          document.getElementById("room").value = '-';
-          document.getElementById("start").value = '名古屋大学駅/';
-          document.getElementById("label10").innerText = 'Search';
-
-      	}
-
-
-      	return true;
-      }
-
-      function alert1(){
-        alert("お問い合わせ機能実装予定")
-      }
-      </script>
-
-
-
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap">
-      </script>
-      <script>
-        <!-- service workerの登録関係
-        -->
-        if
-        ('serviceWorker'
-        in
-        navigator)
-        {
-        navigator.serviceWorker.register('service_worker.js').then(function (registration)
-        {
-        console.log('ServiceWorker
-        registration
-        successful
-        with
-        scope:
-        ',
-        registration.scope);
-        }).catch(function (err)
-        {
-        console.log('ServiceWorker
-        registration
-        failed:
-        ',
-        err);
-        });
+        const p1 = document.getElementById('floating-panel');
+        if (end == '') {
+          alert('目的地が選択されていません。');
+        } else if (end == '-') {
+          alert('No destination selected');
+        } else {
+          if (p1.style.display == 'block') {
+            // noneで非表示
+            p1.style.display = 'none';
+          } else {
+            // blockで表示
+            p1.style.display = 'block';
+          }
         }
-      </script>
+      }
 
-    </body>
+      function clickBtn2() {
+        const p1 = document.getElementById('floating-panel');
+        if (p1.style.display == 'block') {
+          location.href = 'index.html';
+        } else {
+          location.href = 'search.html';
+        }
+      }
+    </script>
 
+    <script>
+      function testSelect() {
+        if (document.getElementById('labelCode_2').value == '999') {
+          document.getElementById('labelCode_2').value = '000';
+          document.getElementById('label1').innerText = 'お知らせ';
+          document.getElementById('label2').innerText = 'NU-Mapsの使い方';
+          document.getElementById('label3').innerText = '言語/Language';
+          document.getElementById('label4').innerText = 'ログイン';
+          document.getElementById('label5').innerText = '現在地';
+          document.getElementById('label6').innerText = '目的地';
+          document.getElementById('building').value = '';
+          document.getElementById('room').value = '';
+          document.getElementById('start').value = '名古屋大学駅';
+          document.getElementById('label10').innerText = '検索';
+        } else {
+          document.getElementById('labelCode_2').value = '999';
+          document.getElementById('label1').innerText = 'News';
+          document.getElementById('label2').innerText = 'How to use NU-Maps';
+          document.getElementById('label3').innerText = '言語/Language';
+          document.getElementById('label4').innerText = 'Login';
+          document.getElementById('label5').innerText = 'Present location';
+          document.getElementById('label6').innerText = 'Destination';
+          document.getElementById('building').value = '-';
+          document.getElementById('room').value = '-';
+          document.getElementById('start').value = '名古屋大学駅/';
+          document.getElementById('label10').innerText = 'Search';
+        }
+
+        return true;
+      }
+
+      function alert1() {
+        alert('お問い合わせ機能実装予定');
+      }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap"></script>
+    <script>
+      <!-- service workerの登録関係
+      -->
+      if
+      ('serviceWorker'
+      in
+      navigator)
+      {
+      navigator.serviceWorker.register('service_worker.js').then(function (registration)
+      {
+      console.log('ServiceWorker
+      registration
+      successful
+      with
+      scope:
+      ',
+      registration.scope);
+      }).catch(function (err)
+      {
+      console.log('ServiceWorker
+      registration
+      failed:
+      ',
+      err);
+      });
+      }
+    </script>
+  </body>
 </html>

@@ -45,7 +45,8 @@ phpCAS::forceAuthentication();
     <title>NU Maps</title>
     <!-- BootstrapのCSS読み込み -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
     <script src="js/jquery-1.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
@@ -134,7 +135,7 @@ phpCAS::forceAuthentication();
             </div>
           <div id="wrapper"></div>
 
-          <a style="font-family:arial block; color:#fff;font-size: 40px;" href="index.html">NU Maps</a>
+          <a href="index.html" class="title">NU Maps</a>
         </div>
       </nav>
 

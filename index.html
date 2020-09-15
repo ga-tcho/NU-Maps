@@ -1,150 +1,132 @@
 <!DOCTYPE html>
 <html lang="ja">
-
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NU Maps</title>
     <!-- BootstrapのCSS読み込み -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet" />
     <script src="js/jquery-1.5.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- ホーム画面に表示されるアプリ名 -->
-    <meta name="apple-mobile-web-app-title" content="NU-Maps">
+    <meta name="apple-mobile-web-app-title" content="NU-Maps" />
     <!-- ホーム画面に表示されるアプリアイコン -->
-    <link rel="apple-touch-icon" href="images/img.png">
+    <link rel="apple-touch-icon" href="images/img.png" />
     <script type="text/javascript" src="hum_icon.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
   </head>
 
-
-
-    <body class="indexbody">
+  <body class="indexbody">
     <div id="labelCode_1" tabindex="-1" value="000"></div>
     <div class="displaylogo">
-    <img class="logo" src="images/1111.png" width="200px;"height="235px;">
-   </div>
-      <div class="intro">
-        <div>
-          <div id="label5">NU-Maps とは</div>
-        </div>
+      <img class="logo" src="images/1111.png" width="200px;" height="235px;" />
+    </div>
+    <div class="intro">
+      <div>
+        <div id="label5">NU-Maps とは</div>
       </div>
+    </div>
 
-      <div class="intro_script">
-        <div>
-          <div id="label6">名古屋大学の建物や教室の場所を</div>
-        </div>
-        <div>
-          <div id="label7">検索できるアプリです。</div>
-        </div>
+    <div class="intro_script">
+      <div id="label6">名古屋大学の建物や教室の場所を</div>
+      <div id="label7">検索できるアプリです。</div>
+    </div>
+
+    <div class="frame">
+      <div style="color: #fff">
+        <a onClick="alert1();" class="start_btn"> 名大IDでログイン </a>
       </div>
-
-
-      <div class="frame">
-        <div class="log_frame"></div>
-        <div>
-          <div id="label1"onClick="alert1();">名大IDでログイン</div>
-        </div>
-        <div>
-          <div id="label2">もしくは</div>
-        </div>
-        <div class="nlog_frame"></div>
-        <div>
-          <a onClick="JavaScript:button_click_monitor ();">
-           <div id="label3">ログイン無しで利用</div>
-          </a>
-        </div>
-        <div>
-          <div><div id="label4"style="margin-left:120px;">※機能制限あり</div></div>
-        </div>
+      <div>
+        <div id="label2">もしくは</div>
       </div>
+      <div style="color: #fff">
+        <a onClick="JavaScript:button_click_monitor ();" class="start_btn"> ログイン無しで利用 </a>
+      </div>
+      <div>
+        <div id="label4" style="margin-left: 120px; font-size: 14px">※機能制限あり</div>
+      </div>
+    </div>
 
-        <div class="change_lang">
-          <div onClick="JavaScript:testSelect();"><img src="images/img.png" height="20px"width="20px;">日本語/English</div>
-        </div>
+    <div class="btn-flat-border">
+      <div onClick="JavaScript:testSelect();"><img src="images/img.png" height="20px" width="20px;" />日本語/English</div>
+    </div>
 
-
-
-        <script>
-        function testSelect() {
-
-          if (document.getElementById("labelCode_1").value == '999') {
-      		document.getElementById("labelCode_1").value = '000';
-      		document.getElementById("label1").innerText = '名大IDでログイン';
-          document.getElementById("label2").innerText = 'もしくは';
-          document.getElementById("label3").innerText = 'ログイン無しで利用';
-          document.getElementById("label4").innerText = '※機能制限あり';
-          document.getElementById("label5").innerText = 'NU-Mapsとは';
-          document.getElementById("label6").innerText = '名古屋大学の建物や教室に場所を';
-          document.getElementById("label7").innerText = '検索できるアプリです。';
-      	  } else {
-      		document.getElementById("labelCode_1").value = '999';
-      		document.getElementById("label1").innerText = 'Log in with your NU ID';
-          document.getElementById("label2").innerText = 'or';
-          document.getElementById("label3").innerText = 'Use without login';
-          document.getElementById("label4").innerText = '※Limited functionality';
-          document.getElementById("label5").innerText = 'What is NU-Maps';
-          document.getElementById("label6").innerText = 'This app can search the location';
-          document.getElementById("label7").innerText = 'of NU buildings and classrooms';
+    <script>
+      function testSelect() {
+        if (document.getElementById('labelCode_1').value == '999') {
+          document.getElementById('labelCode_1').value = '000';
+          document.getElementById('label1').innerText = '名大IDでログイン';
+          document.getElementById('label2').innerText = 'もしくは';
+          document.getElementById('label3').innerText = 'ログイン無しで利用';
+          document.getElementById('label4').innerText = '※機能制限あり';
+          document.getElementById('label5').innerText = 'NU-Mapsとは';
+          document.getElementById('label6').innerText = '名古屋大学の建物や教室に場所を';
+          document.getElementById('label7').innerText = '検索できるアプリです。';
+        } else {
+          document.getElementById('labelCode_1').value = '999';
+          document.getElementById('label1').innerText = 'Log in with your NU ID';
+          document.getElementById('label2').innerText = 'or';
+          document.getElementById('label3').innerText = 'Use without login';
+          document.getElementById('label4').innerText = '※Limited functionality';
+          document.getElementById('label5').innerText = 'What is NU-Maps';
+          document.getElementById('label6').innerText = 'This app can search the location';
+          document.getElementById('label7').innerText = 'of NU buildings and classrooms';
         }
+      }
+
+      function button_click_monitor() {
+        if (document.getElementById('labelCode_1').value == '999') {
+          window.location.href = 'search2.html';
+        } else {
+          window.location.href = 'search.html';
         }
+      }
 
+      function alert1() {
+        alert('Cas認証実装予定');
+      }
+      function alert2() {
+        alert('お問い合わせ機能実装予定');
+      }
+    </script>
 
-        function button_click_monitor (){
-          if (document.getElementById("labelCode_1").value == '999') {
-            window.location.href = 'search2.html';
-
-          } else {
-            window.location.href = 'search.html';}
-          }
-
-        function alert1(){
-          alert("Cas認証実装予定")
-            }
-        function alert2(){
-          alert("お問い合わせ機能実装予定")
-            }
-        </script>
-
-        <script>
-        <!-- service workerの登録関係
-        -->
-        if
-        ('serviceWorker'
-        in
-        navigator)
-        {
-        navigator.serviceWorker.register('service_worker.js').then(function (registration)
-        {
-        console.log('ServiceWorker
-        registratio
-        successful
-        with
-        scope:
-        ',
-        registration.scope);
-        }).catch(function (err)
-        {
-        console.log('ServiceWorker
-        registration
-        failed:
-        ',
-        err);
-        });
-        }
-      </script>
-
-    </body>
-    <footer style="height:80px;">
-    </footer>
-
+    <script>
+      <!-- service workerの登録関係
+      -->
+      if
+      ('serviceWorker'
+      in
+      navigator)
+      {
+      navigator.serviceWorker.register('service_worker.js').then(function (registration)
+      {
+      console.log('ServiceWorker
+      registratio
+      successful
+      with
+      scope:
+      ',
+      registration.scope);
+      }).catch(function (err)
+      {
+      console.log('ServiceWorker
+      registration
+      failed:
+      ',
+      err);
+      });
+      }
+    </script>
+  </body>
+  <footer style="height: 80px"></footer>
 </html>
