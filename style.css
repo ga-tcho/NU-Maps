@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: "YuGothic", 　 "メイリオ", sans-serif;
+  font-family: 'YuGothic', 　 'メイリオ', sans-serif;
 }
 
 header {
@@ -198,10 +198,10 @@ body {
 }
 
 .title {
-  font-family: "Londrina Shadow", sans-serif;
+  font-family: 'Londrina Shadow', sans-serif;
 }
 .search-title {
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold;
 }
 
@@ -332,14 +332,14 @@ body {
   height: 3px;
   background: #fff;
   display: block;
-  content: "";
+  content: '';
   transform: translateX(0) rotate(0deg);
 }
 
 .icon-animation span:before {
   transition: all 0.3s;
   position: absolute;
-  content: "";
+  content: '';
   width: 25px;
   height: 3px;
   background: #4b7198;
@@ -404,7 +404,7 @@ body {
   font-weight: 300;
   line-height: 180%;
   position: relative;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   letter-spacing: 2px;
 }
 
