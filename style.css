@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'YuGothic', 　 'メイリオ', sans-serif;
+
 }
 
 header {
@@ -17,8 +17,12 @@ nav div {
 }
 
 nav div a {
-  font-family: arial block;
-  color: #fff;
+  font-family: "Helvetica Neue",
+     Arial,
+     "Hiragino Kaku Gothic ProN",
+     "Hiragino Sans",
+     "Meiryo",
+     sans-serif;  color: #fff;
   font-size: 40px;
 }
 
@@ -30,49 +34,14 @@ nav div a {
 .displaylogo {
   text-align: center;
 }
-.logo {
-  margin-top: 80px;
-}
 
-.intro {
-  background-color: #1c9bb2;
-  margin-top: 35px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: solid;
-  border-width: 1px;
-  border-color: #fff;
-  height: 42px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 0px;
-}
-
-.intro div {
-  text-align: center;
-}
-
-.intro div div {
-  font-size: 22px;
-  margin-top: 4px;
-  color: #fff;
-}
 
 .intro_script {
-  background-color: #1c9bb2;
-  margin-top: -1px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 5px;
-  border: solid;
-  border-width: 1px;
-  border-color: #fff;
   height: 81px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 10px;
 }
 
 .intro_script div {
@@ -92,7 +61,6 @@ nav div a {
 }
 
 .frame {
-  background-color: #1c9bb2;
   margin-top: 15px;
   margin-left: 10px;
   margin-right: 10px;
@@ -100,51 +68,22 @@ nav div a {
   border-width: 1px;
   border-color: #fff;
   height: 261px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .frame div {
   text-align: center;
 }
 
+.frame div a {
+  font-size: 20px;
+  font-weight: bold;
+}
 .frame div div {
   font-size: 22px;
-  margin-top: 18px;
+  margin-top: 15px;
   color: #fff;
 }
 
-.log_frame {
-  background-color: #0088a3;
-  margin-top: 18px;
-  margin-left: 15px;
-  margin-right: 15px;
-  border: solid;
-  border-width: 2.5px;
-  border-color: #fff;
-  height: 89px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.nlog_frame {
-  background-color: #30f5e4;
-  margin-top: 10px;
-  margin-left: 15px;
-  margin-right: 15px;
-  border: solid;
-  border-width: 2.5px;
-  border-color: #fff;
-  height: 52px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 
 #label1 {
   font-size: 22px;
@@ -164,26 +103,7 @@ nav div a {
   color: #fff;
 }
 
-.change_lang {
-  margin-top: 20px;
-  margin-left: 184px;
-  margin-right: 18px;
-  border: solid;
-  border-width: 2.5px;
-  border-color: #fff;
-  height: 33px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 
-.change_lang div {
-  font-size: 22px;
-  margin-left: 5px;
-  margin-top: -3px;
-  color: #fff;
-}
 
 /*search.html------------------------------------------*/
 
@@ -197,12 +117,39 @@ body {
   padding: 0;
 }
 
-.title {
-  font-family: 'Londrina Shadow', sans-serif;
-}
-.search-title {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+
+.search-title1 {
+  font-family: "Helvetica Neue",
+     Arial,
+     "Hiragino Kaku Gothic ProN",
+     "Hiragino Sans",
+     "Meiryo",
+     sans-serif;
   font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+.search-title2 {
+  font-family: "Helvetica Neue",
+     Arial,
+     "Hiragino Kaku Gothic ProN",
+     "Hiragino Sans",
+     "Meiryo",
+     sans-serif;
+  font-weight: bold;
+  margin-top: -300px;
+
+}
+.search-title3 {
+  font-family: "Helvetica Neue",
+     Arial,
+     "Hiragino Kaku Gothic ProN",
+     "Hiragino Sans",
+     "Meiryo",
+     sans-serif;
+  font-weight: bold;
+  font-size: 23px;
 }
 
 #floating-panel {
@@ -213,42 +160,46 @@ body {
 
 .present {
   font-size: 22px;
-  height: 100px;
-  background-color: #fcfcfc;
-  margin-top: 44px;
+  height: 115px;
+  background-color: #F5F5F5;
+  margin-top: 25px;
 }
 
 .present_script {
   font-size: 22px;
-  margin-top: -92px;
+  margin-top: -105px;
   margin-bottom: 7px;
   color: #4bacbb;
 }
 
 .present_selec {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
 }
 
 .destination {
   font-size: 22px;
-  height: 150px;
-  background-color: #fcfcfc;
-  margin-top: 50px;
+  height: 170px;
+  background-color: #F5F5F5;
+  margin-top: 40px;
+  padding-top: 15px;
+
 }
 .destination_script {
   text-align: center;
+  margin-top: -155px;
+  margin-bottom: 7px;
 }
 
 .destination_selec {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
 }
 
 .room_selec {
   margin-top: 12px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 4%;
+  margin-left: 4%;
 }
 
 .search {
@@ -398,13 +349,19 @@ body {
   opacity: 0;
   transform: translate(0px, -15px);
   display: inline-block;
-  color: #ffffff;
+  color: #fff;
   padding: 0;
   font-size: 1.3rem;
   font-weight: 300;
   line-height: 180%;
   position: relative;
-  font-family: 'Montserrat';
+  font-family: "Helvetica Neue",
+     Arial,
+     "Hiragino Kaku Gothic ProN",
+     "Hiragino Sans",
+     "Meiryo",
+     sans-serif;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
@@ -496,13 +453,16 @@ body {
 
 .start_btn {
   display: inline-block;
-  background-color: #60b8ebef;
+  background-color: #288FA3;
   font-size: 18px;
   margin-top: 20px;
   padding: 0.8em;
-  width: 70%;
+  width: 95%;
+  border: solid;
   border-radius: 4px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.12), 0 3px 20px 0 rgba(0, 0, 0, 0.12), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
+  border-width: 2px ;
+  border-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.02), 0 3px 20px 0 rgba(0, 0, 0, 0.02), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
   -webkit-tap-highlight-color: transparent;
   transition: 0.3s ease-out;
   color: #fff;
@@ -513,20 +473,43 @@ body {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
-.btn-flat-border {
+.language_btn {
   display: inline-block;
+  background-color: #288FA3;
   padding: 0.3em 1em;
   margin-top: 20px;
-  margin-left: 184px;
-  margin-right: 18px;
+  margin-left: 60%;
   text-decoration: none;
+  border: solid #fff;
+  border-radius: 8px;
+  border-width: 2px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.02), 0 3px 20px 0 rgba(0, 0, 0, 0.02), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-out;
   color: #fff;
-  border: solid 2px #fff;
-  border-radius: 3px;
-  transition: 0.4s;
 }
 
-.btn-flat-border:hover {
-  background: #60b8ebef;
+.language_btn:hover {
+  background: #0088A3;
+  box-shadow:none
   color: white;
+}
+
+
+
+.btn-outline-light {
+  display: inline-block;
+  background-color: #288FA3;
+
+  border: solid #fff;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.02), 0 3px 20px 0 rgba(0, 0, 0, 0.02), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-out;
+  color: #fff;
+}
+
+
+.btn-outline-light:hover {
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
