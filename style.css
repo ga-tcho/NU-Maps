@@ -68,6 +68,7 @@ nav div a {
   border-width: 1px;
   border-color: #fff;
   height: 261px;
+
 }
 
 .frame div {
@@ -476,9 +477,9 @@ body {
 .language_btn {
   display: inline-block;
   background-color: #288FA3;
-  padding: 0.3em 1em;
+  padding: 0.4em;
   margin-top: 20px;
-  margin-left: 60%;
+  margin-left: 250px;
   text-decoration: none;
   border: solid #fff;
   border-radius: 8px;
