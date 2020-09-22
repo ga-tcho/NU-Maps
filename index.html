@@ -29,7 +29,7 @@
   <body class="indexbody">
     <div id="labelCode_1" tabindex="-1" value="000"></div>
     <div class="displaylogo">
-      <img class="logo" src="images/logo.png" width="200px;" height="290px;" />
+      <img class="logo" src="images/logo.png" width="200px;" height="295px;" />
     </div>
     <div class="intro_script">
       <div id="label6">名古屋大学の建物や教室の場所を</div>
@@ -47,17 +47,19 @@
         <a onClick="JavaScript:button_click_monitor ();" style="border-color: #fff; border-radius: 10px;" class="start_btn" id="label-3"> ログインなしで利用 </a>
       </div>
       <div>
-        <div id="label4" style="margin-left: 53%; margin-top: 5px; font-size: 20px"> ※ 機能制限あり</div>
+        <div id="label4" style="margin-right: 120px; margin-top: 5px; font-size: 20px"> ※機能制限あり</div>
       </div>
     </div>
 
-    <div class="language_btn" onClick="JavaScript:testSelect();">
-      <div><img src="images/language.png" height="25px" width="25px;"> 日本語 / English</div>
+
+    <div class="change_lang">
+      <div onClick="JavaScript:testSelect();"><img src="images/language.png" height="25px"width="25px;"> <div id="label8" style="margin-top:-25px;margin-left:29px;">English</div></div>
     </div>
 
     <script>
       function testSelect() {
         if (document.getElementById('labelCode_1').value == '999') {
+          document.getElementById('label8').innerText = 'English';
           document.getElementById('labelCode_1').value = '000';
           document.getElementById('label6').innerText = '名古屋大学の建物や教室の場所を';
           document.getElementById('label7').innerText = '検索できるアプリです。';
@@ -66,7 +68,9 @@
           document.getElementById('label-3').innerText = 'ログイン無しで利用';
           document.getElementById('label4').innerText = '※機能制限あり';
           document.getElementById('label5').innerText = 'NU-Mapsとは';
+          document.getElementById('label8').innerText = '日本語';
         } else {
+          document.getElementById('label8').innerText = '日本語';
           document.getElementById('labelCode_1').value = '999';
           document.getElementById('label6').innerText = 'This app can search the location';
           document.getElementById('label7').innerText = 'of NU buildings and classrooms';
@@ -75,6 +79,7 @@
           document.getElementById('label-3').innerText = 'Use without login';
           document.getElementById('label4').innerText = '※Limited functionality';
           document.getElementById('label5').innerText = 'What is NU-Maps';
+          document.getElementById('label8').innerText = 'English';
 
         }
       }
