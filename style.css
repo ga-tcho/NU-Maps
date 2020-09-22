@@ -32,12 +32,13 @@ nav div a {
 }
 
 .displaylogo {
+  margin-top: 5px;
   text-align: center;
 }
 
 
 .intro_script {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 5px;
@@ -227,8 +228,8 @@ body {
   font-size: 28px;
   top: 9px;
   left: 5px;
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 70px;
   border-radius: 50%;
 
   /*z-index: ;
