@@ -61,14 +61,14 @@
           <div style="color: #fff" class="nav_sp_top"><a href="#"></a></div>
           <ul class="clearfix">
             <li><a id="label1" href="intro.html">NU Mapsとは</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="" onclick="JavaScript:alert1()">お問い合わせ</a></li>
             <!--<li><a id="label2" href="contact.html">お問い合わせ</a></li>-->
             <!--<li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>-->
             <li><a id="label4" href="index.html">名大IDでログイン</a></li>
             <li><a id="label4" href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></li>
           </ul>
         </div>
-        <div id="wrapper"></div>
+
         <a href="index.html" class="title">
           <img class="logo" src="images/logo-text.png" width="125px;" height="30px;" />
         </a>
@@ -102,7 +102,7 @@
         <select style="border-color: #bbb; border-radius: 8px;" id="building" class="custom-select">
           <option value="">建物名を選択してください</option>
           <option value="全学教育棟本館">全学教育棟本館</option>
-          <option value="全学教育棟A館">全学教育棟A館</option>
+          <!--<option value="全学教育棟A館">全学教育棟A館</option>-->
           <option value="名古屋大学 文系総合館">文系総合館</option>
           <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
           <option value="名古屋大学本部学務部 教養教育院全学教育教務掛">教養教育院全学教育教務課</option>
@@ -129,7 +129,7 @@
           class="btn btn-outline-light"
           onclick="clickBtn1()"
         >
-          <div id="label10" style="font-size: 25px; font-weight: bold; color: #fff" class="search-title">検索</div>
+          <div id="label10" style="font-size: 25px; color: #fff" class="search-title">検索</div>
         </button>
       </div>
     </div>
@@ -205,6 +205,7 @@
       function alert1() {
         alert('お問い合わせ機能実装予定');
       }
+
     </script>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCf-1L_AYDveGBZ_a5cU3BjQx8r68Qjpo&callback=initMap"></script>
