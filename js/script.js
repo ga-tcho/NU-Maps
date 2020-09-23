@@ -279,19 +279,19 @@ var map;
           '</div>'
         }else if (room == "C40"){
         var box = '<div class="box">' +
-              '<a href="map40.html">建物内表示</a>' +
+              '<a href="mapC40.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C41"){
         var box = '<div class="box">' +
-              '<a href="map41.html">建物内表示</a>' +
+              '<a href="mapC41.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C42"){
         var box = '<div class="box">' +
-              '<a href="map42.html">建物内表示</a>' +
+              '<a href="mapC42.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C43"){
         var box = '<div class="box">' +
-              '<a href="map43.html">建物内表示</a>' +
+              '<a href="mapC43.html">建物内表示</a>' +
           '</div>'
         }
         var infowindow = new google.maps.InfoWindow({
