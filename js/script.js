@@ -195,8 +195,8 @@ var map;
       if(end == "全学教育棟本館"){
       marker = new google.maps.Marker({
         position: {
-          lat: 35.154293,
-          lng: 136.962515
+          lat: 35.154271,
+          lng: 136.9625041
         },
         map: map
       });
