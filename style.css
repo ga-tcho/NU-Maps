@@ -166,6 +166,7 @@ body {
 
 #floating-panel {
   background-image: url(images/4.jpg);
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
