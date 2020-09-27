@@ -222,6 +222,30 @@ body {
   margin-top: 0px;
 }
 
+/*map.html------------------------------------------*/
+.gaikann{
+  text-align: center;
+}
+
+.floor_1{
+  text-align:center;
+  margin-top: 50px;
+}
+
+.floor_2{
+  text-align:center;
+  margin-top: 50px;
+}
+
+.floor_3{
+  text-align:center;
+  margin-top: 50px;
+}
+
+.floor_4{
+  text-align:center;margin-top: 50px;
+  margin-bottom:50px;
+}
 /*hum-icon----------------------------------------------------*/
 #wrapper {
   width: 100%;

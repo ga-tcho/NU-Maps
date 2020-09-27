@@ -16,21 +16,8 @@ function changeCategory() {
   if (changedCategory == "全学教育棟本館") {
 
     setZengakukyoikuto();
-  } else if (changedCategory == "全学教育棟A館") {
-
-    Zengakukyoikuto();
-  } else if (changedCategory == "名古屋大学 文系総合館") {
-
-    gakukyoikuto();
-  }else if (changedCategory == "名古屋大学附属図書館") {
-
+  } else {
     kyoikuto();
-  }else if (changedCategory == "名古屋大学本部学務部 教養教育院全学教育教務掛") {
-
-    setSample2();
-  }else {
-
-    setEuropeFoods();
   }
 }
 
@@ -75,64 +62,13 @@ function setZengakukyoikuto() {
   });
 }
 
-//選択肢を設定する
-function Zengakukyoikuto() {
-  //選択肢を空にする
-  room.textContent = null;
-  //選択肢
-  var rooms = [
-    { cd: "", label: "選択して下さい" },
-    { cd: "A11", label: "A11" },
-    { cd: "A12", label: "A12" },
-    { cd: "A13", label: "A13" },
-    { cd: "A14", label: "A14" },
-    { cd: "A15", label: "A15" },
-    { cd: "A21", label: "A21" },
-    { cd: "A26", label: "A26" },
-    { cd: "A27", label: "A27" },
-    { cd: "A28", label: "A28" },
-    { cd: "A31", label: "A31" },
-    { cd: "A32", label: "A32" },
-    { cd: "A33", label: "A33" },
-    { cd: "A34", label: "A34" },
-  ];
-
-  rooms.forEach(function (value) {
-    var op = document.createElement("option");
-    op.value = value.cd;
-    op.text = value.label;
-    room.appendChild(op);
-  });
-}
-
-function gakukyoikuto() {
-  //選択肢を空にする
-  room.textContent = null;
-  //選択肢
-  var rooms = [
-    { cd: "", label: "選択して下さい" },
-    { cd: "0", label: "B10" },
-    { cd: "1", label: "B11" },
-    { cd: "2", label: "B12" },
-    { cd: "2", label: "B13" },
-    { cd: "2", label: "sample" },
-  ];
-
-  rooms.forEach(function (value) {
-    var op = document.createElement("option");
-    op.value = value.cd;
-    op.text = value.label;
-    room.appendChild(op);
-  });
-}
 
 function kyoikuto() {
   //選択肢を空にする
   room.textContent = null;
   //選択肢
   var rooms = [
-    { cd: "", label: "選択して下さい" },
-    { cd: "2", label: "sample" },
+    { cd: "", label: "建物の外観が表示されます" },
   ];
 
   rooms.forEach(function (value) {
@@ -192,6 +128,7 @@ var map;
       }
       var end = document.getElementById('building').value;
       var room = document.getElementById('room').value;
+
       if(end == "全学教育棟本館"){
       marker = new google.maps.Marker({
         position: {
@@ -298,7 +235,7 @@ var map;
           content: box
         });
         infowindow.open(map, marker);
-      }else if(end == "全学教育棟A館"){
+      }else if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
         marker = new google.maps.Marker({
           position: {
             lat: 35.155299,
@@ -306,16 +243,9 @@ var map;
           },
           map: map
         });
-
-        if (document.getElementById("labelCode_2").value == '999') {
           var box = '<div class="box">' +
-                '<a href="map.html">Display in building</a>' +
+                '<a href="a.html">建物外観</a>' +
             '</div>'
-          } else {
-          var box = '<div class="box">' +
-                '<a href="map.html">建物内表示</a>' +
-            '</div>'
-          }
           var infowindow = new google.maps.InfoWindow({
             content: box
           });
@@ -329,39 +259,214 @@ var map;
           },
           map: map
         });
+          var box = '<div class="box">' +
+                '<a href="sougoukann.html">建物外観</a>' +
+            '</div>'
 
-        if (document.getElementById("labelCode_2").value == '999') {
-          var box = '<div class="box">' +
-                '<a href="map.html">Display in building</a>' +
-            '</div>'
-          } else {
-          var box = '<div class="box">' +
-                '<a href="map.html">建物内表示</a>' +
-            '</div>'
-          }
           var infowindow = new google.maps.InfoWindow({
             content: box
           });
           infowindow.open(map, marker);
 
-      }else if(end == "名古屋大学 文系総合館"){
+      }else if(end == "名古屋大学附属図書館"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.154639,
-            lng: 136.966778
+            lat: 35.155114,
+            lng: 136.963724
           },
           map: map
         });
+          var box = '<div class="box">' +
+                '<a href="toshokann.html">建物外観</a>' +
+            '</div>'
 
-        if (document.getElementById("labelCode_2").value == '999') {
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "スターバックスコーヒー 名古屋大学附属図書館店"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.154999,
+            lng: 136.964072
+          },
+          map: map
+        });
           var box = '<div class="box">' +
-                '<a href="map.html">Display in building</a>' +
+                '<a href="sutaba.html">建物外観</a>' +
             '</div>'
-          } else {
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "名古屋大学 生協北部食堂"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.156594,
+            lng: 136.965834
+          },
+          map: map
+        });
           var box = '<div class="box">' +
-                '<a href="map.html">建物内表示</a>' +
+                '<a href="hokubu.html">建物外観</a>' +
             '</div>'
-          }
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "名古屋大学 生協南部書籍店"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.153176,
+            lng: 136.963001
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="nannbu.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "豊田講堂"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.153372,
+            lng: 136.968060
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="toyota.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "名古屋大学 博物館"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.153007,
+            lng: 136.966938
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="hakubutukann.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "ナショナルイノベーションコンプレックス"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.155736,
+            lng: 136.967045
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="nic.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "ファミリーマート 名古屋大学店"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.154048,
+            lng: 136.963228
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="famima.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "名古屋大学内郵便局"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.154898,
+            lng: 136.966881
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="yuubinn.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "学生会館"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.157174,
+            lng: 136.965849
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="kaikann.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "ＩＢ電子情報館"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.154934,
+            lng: 136.965784
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="ib.html">建物外観</a>' +
+            '</div>'
+
+          var infowindow = new google.maps.InfoWindow({
+            content: box
+          });
+          infowindow.open(map, marker);
+
+      }else if(end == "工学部1号館"){
+        marker = new google.maps.Marker({
+          position: {
+            lat: 35.156470,
+            lng: 136.964536
+          },
+          map: map
+        });
+          var box = '<div class="box">' +
+                '<a href="kou_1.html">建物外観</a>' +
+            '</div>'
+
           var infowindow = new google.maps.InfoWindow({
             content: box
           });
