@@ -230,6 +230,11 @@ var map;
         var box = '<div class="box">' +
               '<a href="mapC43.html">建物内表示</a>' +
           '</div>'
+        }else{
+        var box = '<div class="box">' +
+                '<a href="map.html">建物外観</a>' +
+            '</div>'
+
         }
         var infowindow = new google.maps.InfoWindow({
           content: box
