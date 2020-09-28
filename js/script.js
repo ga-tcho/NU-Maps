@@ -1,3 +1,5 @@
+
+//建物名に応じて部屋名の変更ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 window.onload = function () {
   // 部屋の選択肢
   room = document.getElementById("room");
@@ -68,7 +70,7 @@ function kyoikuto() {
   room.textContent = null;
   //選択肢
   var rooms = [
-    { cd: "", label: "建物の外観が表示されます" },
+    { cd: "", label: "ー" },
   ];
 
   rooms.forEach(function (value) {
@@ -81,10 +83,9 @@ function kyoikuto() {
 
 
 
-//search.html ルーティング
+//search.html ルーティングーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
 var map;
-
 
   function initMap() {
     var directionsRenderer = new google.maps.DirectionsRenderer;
@@ -112,16 +113,82 @@ var map;
 
     var onChangeHandler = function () {
       var error = document.getElementById('error').value;
-      if(error == "error"){
-      calculateAndDisplayRoute1(directionsService, directionsRenderer);
-    }else{
-      calculateAndDisplayRoute(directionsService, directionsRenderer);
-    }
+      var end = document.getElementById('building').value;
+
+
+        if(error == "error" && end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
+          calculateAndDisplayRoute2(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "全学教育棟本館"){
+          calculateAndDisplayRoute3(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "名古屋大学 文系総合館"){
+          calculateAndDisplayRoute4(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "名古屋大学附属図書館"){
+          calculateAndDisplayRoute5(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "スターバックスコーヒー 名古屋大学附属図書館店"){
+          calculateAndDisplayRoute6(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "名古屋大学 生協北部食堂"){
+          calculateAndDisplayRoute7(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "名古屋大学 生協南部書籍店"){
+          calculateAndDisplayRoute8(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "豊田講堂"){
+          calculateAndDisplayRoute9(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "名古屋大学 博物館"){
+          calculateAndDisplayRoute10(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "ナショナルイノベーションコンプレックス"){
+          calculateAndDisplayRoute11(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "ファミリーマート 名古屋大学店"){
+          calculateAndDisplayRoute12(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "名古屋大学内郵便局"){
+          calculateAndDisplayRoute13(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "学生会館"){
+          calculateAndDisplayRoute14(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "ＩＢ電子情報館"){
+          calculateAndDisplayRoute15(directionsService, directionsRenderer);
+        }else if(error == "error" && end == "工学部1号館"){
+          calculateAndDisplayRoute16(directionsService, directionsRenderer);
+        }else{
+          None
+        }
+
+
+        if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館" && !error == "error"){
+          calculateAndDisplayRoute2(directionsService, directionsRenderer);
+        }else if(end == "全学教育棟本館" && !error == "error"){
+          calculateAndDisplayRoute3(directionsService, directionsRenderer);
+        }else if(end == "名古屋大学 文系総合館" && !error == "error"){
+          calculateAndDisplayRoute4(directionsService, directionsRenderer);
+        }else if(end == "名古屋大学附属図書館" && !error == "error"){
+          calculateAndDisplayRoute5(directionsService, directionsRenderer);
+        }else if(end == "スターバックスコーヒー 名古屋大学附属図書館店" && !error == "error"){
+          calculateAndDisplayRoute6(directionsService, directionsRenderer);
+        }else if(end == "名古屋大学 生協北部食堂" && !error == "error"){
+          calculateAndDisplayRoute7(directionsService, directionsRenderer);
+        }else if(end == "名古屋大学 生協南部書籍店" && !error == "error"){
+          calculateAndDisplayRoute8(directionsService, directionsRenderer);
+        }else if(end == "豊田講堂" && !error == "error"){
+          calculateAndDisplayRoute9(directionsService, directionsRenderer);
+        }else if(end == "名古屋大学 博物館" && !error == "error"){
+          calculateAndDisplayRoute10(directionsService, directionsRenderer);
+        }else if(end == "ナショナルイノベーションコンプレックス" && !error == "error"){
+          calculateAndDisplayRoute11(directionsService, directionsRenderer);
+        }else if(end == "ファミリーマート 名古屋大学店" && !error == "error"){
+          calculateAndDisplayRoute12(directionsService, directionsRenderer);
+        }else if(end == "名古屋大学内郵便局" && !error == "error"){
+          calculateAndDisplayRoute13(directionsService, directionsRenderer);
+        }else if(end == "学生会館" && !error == "error"){
+          calculateAndDisplayRoute14(directionsService, directionsRenderer);
+        }else if(end == "ＩＢ電子情報館" && !error == "error"){
+          calculateAndDisplayRoute15(directionsService, directionsRenderer);
+        }else if(end == "工学部1号館" && !error == "error"){
+          calculateAndDisplayRoute16(directionsService, directionsRenderer);
+        }else{
+          calculateAndDisplayRoute1(directionsService, directionsRenderer);
+        }
 
     // 現在地の表示のための初期化
     initCurrentPosition();
     // 現在地を1000m秒ごとに更新
-    setInterval(updateCurrentPosition, 300);
+    setInterval(updateCurrentPosition, 1000);
 
       if(marker){
         marker.setMap(null);
@@ -132,8 +199,8 @@ var map;
       if(end == "全学教育棟本館"){
       marker = new google.maps.Marker({
         position: {
-          lat: 35.154271,
-          lng: 136.9625041
+          lat: 35.154364,
+          lng: 136.962709
         },
         map: map
       });
@@ -243,8 +310,8 @@ var map;
       }else if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.155299,
-            lng: 136.962008
+            lat: 35.154984,
+            lng: 136.962147
           },
           map: map
         });
@@ -259,8 +326,8 @@ var map;
       }else if(end == "名古屋大学 文系総合館"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.153710,
-            lng: 136.963742
+            lat: 35.153985,
+            lng: 136.964197
           },
           map: map
         });
@@ -276,8 +343,8 @@ var map;
       }else if(end == "名古屋大学附属図書館"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.155114,
-            lng: 136.963724
+            lat: 35.154903,
+            lng: 136.964121
           },
           map: map
         });
@@ -293,8 +360,8 @@ var map;
       }else if(end == "スターバックスコーヒー 名古屋大学附属図書館店"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.154999,
-            lng: 136.964072
+            lat: 35.154903,
+            lng: 136.964121
           },
           map: map
         });
@@ -310,8 +377,8 @@ var map;
       }else if(end == "名古屋大学 生協北部食堂"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.156594,
-            lng: 136.965834
+            lat: 35.156664,
+            lng: 136.965586
           },
           map: map
         });
@@ -327,8 +394,8 @@ var map;
       }else if(end == "名古屋大学 生協南部書籍店"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.153176,
-            lng: 136.963001
+            lat: 35.153227,
+            lng: 136.962995
           },
           map: map
         });
@@ -344,8 +411,8 @@ var map;
       }else if(end == "豊田講堂"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.153372,
-            lng: 136.968060
+            lat: 35.153437,
+            lng: 136.967830
           },
           map: map
         });
@@ -361,8 +428,8 @@ var map;
       }else if(end == "名古屋大学 博物館"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.153007,
-            lng: 136.966938
+            lat: 35.153183,
+            lng: 136.966964
           },
           map: map
         });
@@ -378,8 +445,8 @@ var map;
       }else if(end == "ナショナルイノベーションコンプレックス"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.155736,
-            lng: 136.967045
+            lat: 35.155496,
+            lng: 136.966932
           },
           map: map
         });
@@ -395,8 +462,8 @@ var map;
       }else if(end == "ファミリーマート 名古屋大学店"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.154048,
-            lng: 136.963228
+            lat: 35.154084,
+            lng: 136.963135
           },
           map: map
         });
@@ -412,8 +479,8 @@ var map;
       }else if(end == "名古屋大学内郵便局"){
         marker = new google.maps.Marker({
           position: {
-            lat: 35.154898,
-            lng: 136.966881
+            lat: 35.154921,
+            lng: 136.966842
           },
           map: map
         });
@@ -503,6 +570,7 @@ var map;
     });
 
   }
+
   function calculateAndDisplayRoute1(directionsService, directionsRenderer) {
     var start = document.getElementById('start').value;
     var end = document.getElementById('building').value;
@@ -521,6 +589,478 @@ var map;
 
   }
 
+  function calculateAndDisplayRoute2(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154984, 136.962147),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }
+
+  function calculateAndDisplayRoute3(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154466, 136.962991),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.153985,136.964197),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute5(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154903, 136.964121),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute6(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154903, 136.964121),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute7(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.156664, 136.965586),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute8(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154984, 136.962147),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute9(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154984, 136.962147),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute10(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.153179, 136.966967),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute11(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.155496, 136.966932),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute12(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154084, 136.963135),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute13(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154921, 136.966842),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute14(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.157052, 136.965753),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute15(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.154841, 136.965729),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute16(directionsService, directionsRenderer) {
+    var lat = document.getElementById('lat').value;
+    var log = document.getElementById('log').value;
+
+    directionsService.route({
+      origin: new google.maps.LatLng(lat,log), //start,
+      destination: new google.maps.LatLng(35.156314, 136.964458),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }
+
+  //名古屋大学ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+  function calculateAndDisplayRoute2e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154984, 136.962147),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }
+
+  function calculateAndDisplayRoute3e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154466, 136.962991),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute4e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.153985,136.964197),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute5e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154903, 136.964121),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute6e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154903, 136.964121),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute7e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.156664, 136.965586),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute8e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154984, 136.962147),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute9e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154984, 136.962147),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute10e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.153179, 136.966967),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute11e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.155496, 136.966932),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute12e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154084, 136.963135),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute13e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154921, 136.966842),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute14e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.157052, 136.965753),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute15e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.154841, 136.965729),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }function calculateAndDisplayRoute16e(directionsService, directionsRenderer) {
+    var start = document.getElementById('start').value;
+
+    directionsService.route({
+      origin: start,
+      destination: new google.maps.LatLng(35.156314, 136.964458),
+      travelMode: 'WALKING'
+    }, function (response, status) {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(response);
+      } else {
+
+      }
+    });
+
+  }
 
 
   // 現在位置の表示
