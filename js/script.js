@@ -710,7 +710,7 @@ var map;
 
     directionsService.route({
       origin: new google.maps.LatLng(lat,log), //start,
-      destination: new google.maps.LatLng(35.154984, 136.962147),
+      destination: new google.maps.LatLng(35.153423, 136.967801),
       travelMode: 'WALKING'
     }, function (response, status) {
       if (status === 'OK') {
@@ -949,7 +949,7 @@ var map;
 
     directionsService.route({
       origin: start,
-      destination: new google.maps.LatLng(35.154984, 136.962147),
+      destination: new google.maps.LatLng(35.153423, 136.967801),
       travelMode: 'WALKING'
     }, function (response, status) {
       if (status === 'OK') {
