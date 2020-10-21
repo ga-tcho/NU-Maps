@@ -13,7 +13,6 @@ header {
   height:65px;
 
 }
-
 nav div {
   text-align: center;
 }
@@ -27,6 +26,22 @@ nav div a {
      sans-serif;  color: #fff;
   font-size: 40px;
 }
+
+
+#back11{
+  text-align: center;
+}
+
+#title{
+  font-family: "Helvetica Neue",
+     Arial,
+     "Hiragino Kaku Gothic ProN",
+     "Hiragino Sans",
+     "Meiryo",
+     sans-serif;  color: #fff;
+  font-size: 40px;
+}
+
 
 /*index.thml----------------------------------------------*/
 .indexbody {
@@ -398,7 +413,7 @@ li {
   color: #fff;
   padding: 0;
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 180%;
   position: relative;
   font-family: "Helvetica Neue",
@@ -495,6 +510,7 @@ li {
 .nav_sp.active ul li:nth-child(10) a {
   transition-delay: 0.95s;
 }
+
 
 .start_btn {
   display: inline-block;

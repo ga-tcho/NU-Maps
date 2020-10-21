@@ -40,16 +40,199 @@
         $('#error').val('error');
       }
     </script>
+    <style>
+    body{
+     margin: 0;
+   }
+  .navi_item a{
+     color: #fff; /*メニューの色*/
+     text-decoration: none;
+   }
+   .mainView{
+     width: 100vw;
+     height: 100vh;
+     background-color: #;
+   }
+   /*ハンバーガーボタン*/
+   .el_humburger {
+     position: fixed;
+     top: 45px;
+     right: 60px;
+     width: 46px;
+     height: 50px;
+     padding-top: 1px;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     padding-top: 0px;
+     z-index: 20;
+     cursor: pointer;
+     pointer-events: auto;
+     color: #ffffff;
+     text-align: center;}
+
+   @media screen and (max-width: 840px) {
+     .el_humburger {
+       display: white;
+       color: #ffffff;
+       right: 0;
+       top: 0;
+       padding-top: 20px;
+       width: 70px;
+       height: 90px;}
+       #factory .el_humburger {
+         display: ; } }
+
+   .el_humburger_wrapper {
+     margin-bottom: 5px;
+     width: 42px;
+     display: inline-block; }
+
+   @media screen and (max-width: 840px) {
+     .el_humburger_wrapper {
+       margin-bottom: 5px;
+       width: 30px; } }
+
+   .el_humburger_text {
+     font-size: 12px;
+     letter-spacing: 0.1em;
+     font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif; }
+
+   .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
+     display: none; }
+
+   .el_humburger_text.el_humburger_text__close {
+     display: none; }
+
+   .js_humburgerOpen .el_humburger_text.el_humburger_text__close {
+     display: white; }
+
+   @media screen and (max-width: 840px) {
+     .el_humburger_text {
+       font-size: 10px;
+       padding-top: 2px; } }
+
+   @media screen and (max-width: 840px) {
+     .el_humburger_text svg path {
+       -webkit-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
+       -o-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
+       transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
+       fill: #fff; } }
+
+   @media screen and (max-width: 840px) {
+     .js_humburgerOpen .el_humburger_text svg path {
+       fill: #fff; } }
+
+   .el_humburger span.el_humburger_bar {
+     display: block;
+     width: 100%;
+     margin: 0 auto 8.2px;  /*アイコンの太さ*/
+     height: 2px;         /*アイコンの太さ*/
+     background: #ffffff;
+     -webkit-transition: all .2s ease-in-out;
+     -o-transition: all .2s ease-in-out;
+     transition: all .2s ease-in-out; }
+
+   .el_humburger span.el_humburger_bar:last-child {
+     margin-bottom: 0; }
+
+   .js_humburgerOpen .el_humburger span.el_humburger_bar {
+     background: #fff; }
+
+   @media screen and (max-width: 840px) {
+     .el_humburger span.el_humburger_bar {
+       left: 0;
+       top: 0;
+       background: #fff; } } /*色変更*/
+
+   .js_humburgerOpen .el_humburger span.el_humburger_bar.top {
+     -webkit-transform: translateY(9px) rotate(-45deg);
+     -ms-transform: translateY(9px) rotate(-45deg);
+     transform: translateY(9px) rotate(-45deg); }
+
+   .js_humburgerOpen .el_humburger span.el_humburger_bar.middle {
+     opacity: 0; }
+
+   .js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
+     -webkit-transform: translateY(-11px) rotate(45deg);
+     -ms-transform: translateY(-11px) rotate(45deg);
+     transform: translateY(-11px) rotate(45deg); }
+
+   .el_humburgerButton.el_humburgerButton__close {
+     top: 2%;
+     right: 2%; }
+
+   .el_humburgerButton__close span.el_humburger_bar {
+     display: block;
+     width: 35px;
+     margin: 0 auto;
+     height: 4px;
+     background: #fff; }
+
+   .el_humburgerButton__close span.el_humburger_bar.top {
+     -webkit-transform: translateY(5px) rotate(-45deg);
+     -ms-transform: translateY(5px) rotate(-45deg);
+     transform: translateY(5px) rotate(-45deg); }
+
+   .el_humburgerButton__close span.el_humburger_bar.bottom {
+     -webkit-transform: translateY(-6px) rotate(45deg);
+     -ms-transform: translateY(-6px) rotate(45deg);
+     transform: translateY(-6px) rotate(45deg); }
+
+   .navi {
+     position: fixed;
+     right: 0;
+     height: 100%;
+     background-color: #4bacbb;
+     width: 0;
+     z-index: 3;
+     padding-top: 100px;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     -webkit-transition: all 600ms ease-out;
+     -o-transition: all 600ms ease-out;
+     transition: all 600ms ease-out;
+     overflow: hidden; }
+     .js_humburgerOpen .navi {
+       width: 450px; }
+       @media screen and (max-width: 840px) {
+         .js_humburgerOpen .navi {
+           width: 100%;
+           padding: 100px 5% 0; } }
+
+   .navi_item {
+     margin-bottom: 28px;
+     font-size: 20px;
+     color: white;
+     font-family: "Marcellus", serif !important;
+     white-space: nowrap;
+     margin-left: 90px; }
+     .navi_item.op_innerLink {
+       cursor: pointer; }
+     @media screen and (max-width: 840px) {
+       .navi_item {
+         margin-left: 0;
+         font-size: 18px; } }
+    </style>
+
   </head>
 
+  <div  class="el_humburger"><!--ハンバーガーボタン-->
+     <div class="el_humburger_wrapper">
+       <span class="el_humburger_bar top"></span>
+       <span class="el_humburger_bar middle"></span>
+       <span class="el_humburger_bar bottom"></span>
+     </div>
+   </div>
+
   <header>
-    <nav>
-      <div>
+
+      <div id="back11">
         <div onclick="clickBtn2()">
           <div id="back">
             <img src="images/icon/back-white.png" width="80%" />
           </div>
         </div>
+        <!--
         <div id="hamburger">
           <div class="icon-animation type-1">
             <span class="top"></span>
@@ -57,26 +240,25 @@
             <span class="bottom"></span>
           </div>
         </div>
-        <div class="nav_sp">
-          <div style="color: #fff" class="nav_sp_top"><a href="#"></a></div>
-          <ul class="clearfix">
-            <li><a id="label1" href="intro.html">NU Mapsとは</a></li>
-            <li><a href="" onclick="JavaScript:alert1()">お問い合わせ</a></li>
-            <!--<li><a id="label2" href="contact.html">お問い合わせ</a></li>-->
-            <!--<li><a id="label3" href="#" onClick="JavaScript:testSelect();">言語/Language</a></li>-->
-            <li><a id="label4" href="index.html">名大IDでログイン</a></li>
-            <li><a id="label4" href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></li>
-          </ul>
+      -->
+      <div class="navi"><!--ナビゲーション-->
+        <div class="navi_inner">
+          <div class="navi_item"><a href="intro.html">NU Mapsとは</a></div>
+          <div class="navi_item"><a href=""onclick="JavaScript:alert1()">お問い合わせ</a></div>
+          <div class="navi_item"><a href="index.html">名大IDでログイン</a></div>
+          <div class="navi_item"><a href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></div>
         </div>
+      </div>
 
-        <a href="index.html" class="title">
+        <a href="index.html" id="title">
           <img class="logo" src="images/logo-text.png" width="125px;" height="30px;" />
         </a>
       </div>
-    </nav>
+
   </header>
 
   <body>
+    <div class="mainView">
     <div id="labelCode_2" value="100"></div>
     <div id="floating-panel">
       <div class="present"></div>
@@ -116,13 +298,11 @@
           <option value="学生会館">学生会館</option>
           <option value="ＩＢ電子情報館">ＩＢ電子情報館</option>
           <option value="工学部1号館">工学部1号館</option>
-          <option value="-">Please select a building name</option>
         </select>
       </div>
       <div class="room_selec">
         <select style="border-color: #bbb; border-radius: 8px;" class="custom-select" id="room" name="room">
           <option value="">部屋名を選択してください</option>
-          <option value="-">Please select a room name</option>
         </select>
       </div>
       <div class="search">
@@ -142,7 +322,7 @@
     <div id="lat" value=""></div>
     <div id="log" value=""></div>
     <div id="error" value=""></div>
-
+  </div>
     <script>
       //初期表示は非表示
       document.getElementById('floating-panel').style.display = 'block';
@@ -240,5 +420,76 @@
       });
       }
     </script>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+    </script>
+    <script>
+    //変数定義
+    var navigationOpenFlag = false;
+    var navButtonFlag = true;
+    var focusFlag = false;
+
+    //ハンバーガーメニュー
+        $(function(){
+
+          $(document).on('click','.el_humburger',function(){
+            if(navButtonFlag){
+              spNavInOut.switch();
+              //一時的にボタンを押せなくする
+              setTimeout(function(){
+                navButtonFlag = true;
+              },200);
+              navButtonFlag = false;
+            }
+          });
+          $(document).on('click touchend', function(event) {
+            if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+              focusFlag = false;
+              //scrollBlocker(false);
+              spNavInOut.switch();
+            }
+          });
+        });
+
+    //ナビ開く処理
+    function spNavIn(){
+      $('body').removeClass('js_humburgerClose');
+      $('body').addClass('js_humburgerOpen');
+      setTimeout(function(){
+        focusFlag = true;
+      },200);
+      setTimeout(function(){
+        navigationOpenFlag = true;
+      },200);
+    }
+
+    //ナビ閉じる処理
+    function spNavOut(){
+      $('body').removeClass('js_humburgerOpen');
+      $('body').addClass('js_humburgerClose');
+      setTimeout(function(){
+        $(".uq_spNavi").removeClass("js_appear");
+        focusFlag = false;
+      },200);
+      navigationOpenFlag = false;
+    }
+
+    //ナビ開閉コントロール
+    var spNavInOut = {
+      switch:function(){
+        if($('body.spNavFreez').length){
+          return false;
+        }
+        if($('body').hasClass('js_humburgerOpen')){
+         spNavOut();
+        } else {
+         spNavIn();
+        }
+      }
+    };
+    </script>
+
   </body>
 </html>
