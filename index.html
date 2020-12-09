@@ -102,29 +102,7 @@
     <script>
       <!-- service workerの登録関係
       -->
-      if
-      ('serviceWorker'
-      in
-      navigator)
-      {
-      navigator.serviceWorker.register('service_worker.js').then(function (registration)
-      {
-      console.log('ServiceWorker
-      registratio
-      successful
-      with
-      scope:
-      ',
-      registration.scope);
-      }).catch(function (err)
-      {
-      console.log('ServiceWorker
-      registration
-      failed:
-      ',
-      err);
-      });
-      }
+
     </script>
   </body>
   <footer style="height: 80px"></footer>
