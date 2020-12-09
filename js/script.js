@@ -1,4 +1,27 @@
 
+      if
+      ('serviceWorker'
+      in
+      navigator)
+      {
+      navigator.serviceWorker.register('service_worker.js').then(function (registration)
+      {
+      console.log('ServiceWorker
+      registratio
+      successful
+      with
+      scope:
+      ',
+      registration.scope);
+      }).catch(function (err)
+      {
+      console.log('ServiceWorker
+      registration
+      failed:
+      ',
+      err);
+      });
+      }
 //建物名に応じて部屋名の変更ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 window.onload = function () {
   // 部屋の選択肢
