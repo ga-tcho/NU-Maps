@@ -27,50 +27,41 @@
     <script type="text/javascript" src="hum_icon.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="manifest" href="manifest.json" />
-
-    <script>
-      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-      function successCallback(position) {
-        $('#lat').val(String(position.coords.latitude));
-        $('#log').val(String(position.coords.longitude));
-      }
-
-      function errorCallback(error) {
-        alert('名古屋大学駅を始点にします');
-        $('#error').val('error');
-      }
-    </script>
     <style>
+
     body{
      margin: 0;
-   }
-  .navi_item a{
+    }
+    .navi_item a{
      color: #fff; /*メニューの色*/
      text-decoration: none;
-   }
-   .mainView{
+    }
+    .mainView{
      width: 100vw;
      height: 100vh;
      background-color: #;
-   }
-   /*ハンバーガーボタン*/
-   .el_humburger {
-     position: fixed;
-     top: 45px;
-     right: 60px;
+     padding-top: 65px;
+    }
+    /*ハンバーガーボタン*/
+    .el_humburger {
+     /* position: fixed; */
+     /* top: 45px; */
+     /* right: 60px; */
      width: 46px;
      height: 50px;
      padding-top: 1px;
      -webkit-box-sizing: border-box;
      box-sizing: border-box;
-     padding-top: 0px;
+     padding-top: 20px;
+     margin-right: 15px;
      z-index: 20;
      cursor: pointer;
      pointer-events: auto;
      color: #ffffff;
-     text-align: center;}
+     text-align: center;
+     }
 
-   @media screen and (max-width: 840px) {
+    @media screen and (max-width: 840px) {
      .el_humburger {
        display: white;
        color: #ffffff;
@@ -78,51 +69,53 @@
        top: 0;
        padding-top: 20px;
        width: 70px;
-       height: 90px;}
+       height: 90px;
+       margin-right: 0;
+       }
        #factory .el_humburger {
          display: ; } }
 
-   .el_humburger_wrapper {
+    .el_humburger_wrapper {
      margin-bottom: 5px;
      width: 42px;
      display: inline-block; }
 
-   @media screen and (max-width: 840px) {
+    @media screen and (max-width: 840px) {
      .el_humburger_wrapper {
        margin-bottom: 5px;
        width: 30px; } }
 
-   .el_humburger_text {
+    .el_humburger_text {
      font-size: 12px;
      letter-spacing: 0.1em;
      font-family: "游ゴシック Medium", YuGothic, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif; }
 
-   .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
+    .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
      display: none; }
 
-   .el_humburger_text.el_humburger_text__close {
+    .el_humburger_text.el_humburger_text__close {
      display: none; }
 
-   .js_humburgerOpen .el_humburger_text.el_humburger_text__close {
+    .js_humburgerOpen .el_humburger_text.el_humburger_text__close {
      display: white; }
 
-   @media screen and (max-width: 840px) {
+    @media screen and (max-width: 840px) {
      .el_humburger_text {
        font-size: 10px;
        padding-top: 2px; } }
 
-   @media screen and (max-width: 840px) {
+    @media screen and (max-width: 840px) {
      .el_humburger_text svg path {
        -webkit-transition: all 2000ms cubic-bezier(0.16, 0.52, 0.25, 1);
        -o-transition: all 2000ms cubic-bezier(0.16, 0.52, 0.25, 1);
        transition: all 2000ms cubic-bezier(0.16, 0.52, 0.25, 1);
        fill: #fff; } }
 
-   @media screen and (max-width: 840px) {
+    @media screen and (max-width: 840px) {
      .js_humburgerOpen .el_humburger_text svg path {
        fill: #fff; } }
 
-   .el_humburger span.el_humburger_bar {
+    .el_humburger span.el_humburger_bar {
      display: block;
      width: 100%;
      margin: 0 auto 7.2px;  /*アイコンの太さ*/
@@ -132,53 +125,53 @@
      -o-transition: all .2s ease-in-out;
      transition: all .2s ease-in-out; }
 
-   .el_humburger span.el_humburger_bar:last-child {
+    .el_humburger span.el_humburger_bar:last-child {
      margin-bottom: 0; }
 
-   .js_humburgerOpen .el_humburger span.el_humburger_bar {
+    .js_humburgerOpen .el_humburger span.el_humburger_bar {
      background: #fff; }
 
-   @media screen and (max-width: 840px) {
+    @media screen and (max-width: 840px) {
      .el_humburger span.el_humburger_bar {
        left: 0;
        top: 0;
        background: #fff; } } /*色変更*/
 
-   .js_humburgerOpen .el_humburger span.el_humburger_bar.top {
+    .js_humburgerOpen .el_humburger span.el_humburger_bar.top {
      -webkit-transform: translateY(9px) rotate(-45deg);
      -ms-transform: translateY(9px) rotate(-45deg);
      transform: translateY(9px) rotate(-45deg); }
 
-   .js_humburgerOpen .el_humburger span.el_humburger_bar.middle {
+    .js_humburgerOpen .el_humburger span.el_humburger_bar.middle {
      opacity: 0; }
 
-   .js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
+    .js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
      -webkit-transform: translateY(-11px) rotate(45deg);
      -ms-transform: translateY(-11px) rotate(45deg);
      transform: translateY(-11px) rotate(45deg); }
 
-   .el_humburgerButton.el_humburgerButton__close {
+    .el_humburgerButton.el_humburgerButton__close {
      top: 2%;
      right: 2%; }
 
-   .el_humburgerButton__close span.el_humburger_bar {
+    .el_humburgerButton__close span.el_humburger_bar {
      display: block;
      width: 35px;
      margin: 0 auto;
      height: 4px;
      background: #fff; }
 
-   .el_humburgerButton__close span.el_humburger_bar.top {
+    .el_humburgerButton__close span.el_humburger_bar.top {
      -webkit-transform: translateY(5px) rotate(-45deg);
      -ms-transform: translateY(5px) rotate(-45deg);
      transform: translateY(5px) rotate(-45deg); }
 
-   .el_humburgerButton__close span.el_humburger_bar.bottom {
+    .el_humburgerButton__close span.el_humburger_bar.bottom {
      -webkit-transform: translateY(-6px) rotate(45deg);
      -ms-transform: translateY(-6px) rotate(45deg);
      transform: translateY(-6px) rotate(45deg); }
 
-   .navi {
+    .navi {
      position: fixed;
      right: 0;
      height: 100%;
@@ -193,19 +186,22 @@
      transition: all 200ms ease-out;
      overflow: hidden; }
      .js_humburgerOpen .navi {
-       width: 300px; }
+       width: 300px;
+       z-index: 10;
+       }
        @media screen and (max-width: 840px) {                                                                                                                                       e
          .js_humburgerOpen .navi {
            width: 100%;
            padding: 100px 5% 0; } }
 
-   .navi_item {
+    .navi_item {
      margin-bottom: 28px;
      font-size: 20px;
      color: white;
-     font-family: "Marcellus", serif !important;
+     /* font-family: "Marcellus", serif !important; */
      white-space: nowrap;
-     margin-left: 90px; }
+     /* margin-left: 90px; */
+    }
      .navi_item.op_innerLink {
        cursor: pointer; }
      @media screen and (max-width: 840px) {
@@ -214,16 +210,31 @@
          font-size: 18px; } }
     </style>
 
+    <script>
+      navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+      function successCallback(position) {
+        $('#lat').val(String(position.coords.latitude));
+        $('#log').val(String(position.coords.longitude));
+      }
+
+      function errorCallback(error) {
+        alert('名古屋大学駅を始点にします');
+        $('#error').val('error');
+      }
+    </script>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+//共通パーツ読み込み
+  $(function() {
+       $("#header").load("header.html");
+       $("#footer").load("footer.html");
+});
+</script>
+
   </head>
 
-  <div  class="el_humburger"><!--ハンバーガーボタン-->
-     <div class="el_humburger_wrapper">
-       <span class="el_humburger_bar top"></span>
-       <span class="el_humburger_bar middle"></span>
-       <span class="el_humburger_bar bottom"></span>
-     </div>
-   </div>
 
+<script>header();</script>
   <header>
 
       <div id="back11">
@@ -253,11 +264,21 @@
         <a href="index.html" id="title">
           <img class="logo" src="images/logo-text.png" width="125px;" height="30px;" />
         </a>
+
+        <div  class="el_humburger"><!--ハンバーガーボタン-->
+           <div class="el_humburger_wrapper">
+             <span class="el_humburger_bar top"></span>
+             <span class="el_humburger_bar middle"></span>
+             <span class="el_humburger_bar bottom"></span>
+           </div>
+         </div>
       </div>
 
   </header>
 
   <body>
+    <div id="header"></div>
+
     <div class="mainView">
     <div id="labelCode_2" value="100"></div>
     <div id="floating-panel">
@@ -488,6 +509,16 @@
         }
       }
     };
+
+    function header(){
+    $.ajax({
+        url: "header.html",
+        cache: false,
+        success: function(html){
+            document.write(html);
+        }
+    });
+}
     </script>
 
   </body>
