@@ -1,27 +1,4 @@
 
-      if
-      ('serviceWorker'
-      in
-      navigator)
-      {
-      navigator.serviceWorker.register('service_worker.js').then(function (registration)
-      {
-      console.log('ServiceWorker
-      registratio
-      successful
-      with
-      scope:
-      ',
-      registration.scope);
-      }).catch(function (err)
-      {
-      console.log('ServiceWorker
-      registration
-      failed:
-      ',
-      err);
-      });
-      }
 //建物名に応じて部屋名の変更ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 window.onload = function () {
   // 部屋の選択肢
@@ -229,99 +206,99 @@ var map;
     //  if (document.getElementById("labelCode_2").value == '999')
     if(room == "C10") {
         var box = '<div class="box">' +
-              '<a href="mapC10.html">建物内表示</a>' +
+              '<a href="asset/mapC10.html">建物内表示</a>' +
           '</div>'
         } else if (room == "C11"){
         var box = '<div class="box">' +
-              '<a href="mapC11.html">建物内表示</a>' +
+              '<a href="asset/mapC11.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C12"){
         var box = '<div class="box">' +
-              '<a href="mapC12.html">建物内表示</a>' +
+              '<a href="asset/mapC12.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C13"){
         var box = '<div class="box">' +
-              '<a href="mapC13.html">建物内表示</a>' +
+              '<a href="asset/mapC13.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C14"){
         var box = '<div class="box">' +
-              '<a href="mapC14.html">建物内表示</a>' +
+              '<a href="asset/mapC14.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C15"){
         var box = '<div class="box">' +
-              '<a href="mapC15.html">建物内表示</a>' +
+              '<a href="asset/mapC15.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C20"){
         var box = '<div class="box">' +
-              '<a href="mapC20.html">建物内表示</a>' +
+              '<a href="asset/mapC20.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C21"){
         var box = '<div class="box">' +
-              '<a href="mapC21.html">建物内表示</a>' +
+              '<a href="asset/mapC21.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C22"){
         var box = '<div class="box">' +
-              '<a href="mapC22.html">建物内表示</a>' +
+              '<a href="asset/mapC22.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C23"){
         var box = '<div class="box">' +
-              '<a href="mapC23.html">建物内表示</a>' +
+              '<a href="asset/mapC23.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C24"){
         var box = '<div class="box">' +
-              '<a href="mapC24.html">建物内表示</a>' +
+              '<a href="asset/mapC24.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C25"){
         var box = '<div class="box">' +
-              '<a href="mapC25.html">建物内表示</a>' +
+              '<a href="asset/mapC25.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C30"){
         var box = '<div class="box">' +
-              '<a href="mapC30.html">建物内表示</a>' +
+              '<a href="asset/mapC30.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C31"){
         var box = '<div class="box">' +
-              '<a href="mapC31.html">建物内表示</a>' +
+              '<a href="asset/mapC31.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C32"){
         var box = '<div class="box">' +
-              '<a href="mapC32.html">建物内表示</a>' +
+              '<a href="asset/mapC32.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C33"){
         var box = '<div class="box">' +
-              '<a href="mapC33.html">建物内表示</a>' +
+              '<a href="asset/mapC33.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C34"){
         var box = '<div class="box">' +
-              '<a href="mapC34.html">建物内表示</a>' +
+              '<a href="asset/mapC34.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C35"){
         var box = '<div class="box">' +
-              '<a href="mapC35.html">建物内表示</a>' +
+              '<a href="asset/mapC35.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C36"){
         var box = '<div class="box">' +
-              '<a href="mapC36.html">建物内表示</a>' +
+              '<a href="asset/mapC36.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C40"){
         var box = '<div class="box">' +
-              '<a href="mapC40.html">建物内表示</a>' +
+              '<a href="asset/mapC40.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C41"){
         var box = '<div class="box">' +
-              '<a href="mapC41.html">建物内表示</a>' +
+              '<a href="asset/mapC41.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C42"){
         var box = '<div class="box">' +
-              '<a href="mapC42.html">建物内表示</a>' +
+              '<a href="asset/mapC42.html">建物内表示</a>' +
           '</div>'
         }else if (room == "C43"){
         var box = '<div class="box">' +
-              '<a href="mapC43.html">建物内表示</a>' +
+              '<a href="asset/mapC43.html">建物内表示</a>' +
           '</div>'
         }else{
         var box = '<div class="box">' +
-                '<a href="map.html">建物外観</a>' +
+                '<a href="asset/map.html">建物外観</a>' +
             '</div>'
 
         }
@@ -338,7 +315,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="a.html">建物外観</a>' +
+                '<a href="asset/a.html">建物外観</a>' +
             '</div>'
           var infowindow = new google.maps.InfoWindow({
             content: box
@@ -354,7 +331,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="sougoukann.html">建物外観</a>' +
+                '<a href="asset/sougoukann.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -371,7 +348,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="toshokann.html">建物外観</a>' +
+                '<a href="asset/toshokann.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -388,7 +365,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="sutaba.html">建物外観</a>' +
+                '<a href="asset/sutaba.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -405,7 +382,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="hokubu.html">建物外観</a>' +
+                '<a href="asset/hokubu.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -422,7 +399,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="nannbu.html">建物外観</a>' +
+                '<a href="asset/nannbu.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -439,7 +416,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="toyota.html">建物外観</a>' +
+                '<a href="asset/toyota.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -456,7 +433,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="hakubutukann.html">建物外観</a>' +
+                '<a href="asset/hakubutukann.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -473,7 +450,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="nic.html">建物外観</a>' +
+                '<a href="asset/nic.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -490,7 +467,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="famima.html">建物外観</a>' +
+                '<a href="asset/famima.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -507,7 +484,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="yuubinn.html">建物外観</a>' +
+                '<a href="asset/yuubinn.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -524,7 +501,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="kaikann.html">建物外観</a>' +
+                '<a href="asset/kaikann.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -541,7 +518,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="ib.html">建物外観</a>' +
+                '<a href="asset/ib.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
@@ -558,7 +535,7 @@ var map;
           map: map
         });
           var box = '<div class="box">' +
-                '<a href="kou_1.html">建物外観</a>' +
+                '<a href="asset/kou_1.html">建物外観</a>' +
             '</div>'
 
           var infowindow = new google.maps.InfoWindow({
