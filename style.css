@@ -196,8 +196,7 @@ nav div a {
     color: #fff;
   }
   .change_lang{
-    margin-top:20px;margin-left: 15
-    0px;margin-right: 18px;border:solid;border-width: 2px; border-color:#fff;height:36px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;background-color: #288FA3;box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.02),0 3px 20px 0 rgba(0, 0, 0, 0.02), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
+    margin-top:20px;margin-left: 100px;margin-right: 18px;border:solid;border-width: 2px; border-color:#fff;height:36px;border-top-left-radius: 10px;border-bottom-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;background-color: #288FA3;box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.02),0 3px 20px 0 rgba(0, 0, 0, 0.02), 0 5px 6px -2px rgba(0, 0, 0, 0.2);
   }
 }
 
