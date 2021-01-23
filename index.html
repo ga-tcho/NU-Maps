@@ -21,7 +21,6 @@
     <meta name="apple-mobile-web-app-title" content="NU-Maps" />
     <!-- ホーム画面に表示されるアプリアイコン -->
     <link rel="apple-touch-icon" href="images/img.png" />
-    <script type="text/javascript" src="hum_icon.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="manifest" href="manifest.json" />
   </head>
@@ -36,10 +35,9 @@
       <div id="label6">名古屋大学の建物や教室の場所を</div>
       <div id="label7">検索できるアプリです。</div>
     </div>
-
     <div class="frame">
       <div style="color: #fff">
-        <a onClick="alert1();" style="border-color: #fff; border-radius: 10px;" class="start_btn" class="start_btn" id="label-1"> 名大IDでログイン </a>
+        <a onClick="alert1();" style="border-color: #fff; border-radius: 10px;" class="start_btn"id="label-1"> 名大IDでログイン </a>
       </div>
       <div>
         <div id="label2">もしくは</div>
@@ -51,81 +49,83 @@
         <div id="label4" style="margin-left: 92px; margin-top: 5px;"> ※機能制限あり</div>
       </div>
     </div>
-
-
     <div class="change_lang">
       <div onClick="JavaScript:testSelect();"><img src="images/language.png" height="25px"width="25px;"> <div id="label8" style="margin-top:-25px;margin-left:29px;">English</div></div>
     </div>
-
-    <script>
-      function testSelect() {
-        if (document.getElementById('labelCode_1').value == '999') {
-          document.getElementById('label8').innerText = 'English';
-          document.getElementById('labelCode_1').value = '000';
-          document.getElementById('label6').innerText = '名古屋大学の建物や教室の場所を';
-          document.getElementById('label7').innerText = '検索できるアプリです。';
-          document.getElementById('label-1').innerText = '名大IDでログイン';
-          document.getElementById('label2').innerText = 'もしくは';
-          document.getElementById('label-3').innerText = 'ログイン無しで利用';
-          document.getElementById('label4').innerText = '※機能制限あり';
-          document.getElementById('label8').innerText = '日本語';
-        } else {
-          document.getElementById('label8').innerText = '日本語';
-          document.getElementById('labelCode_1').value = '999';
-          document.getElementById('label6').innerText = 'allows you to search the locations';
-          document.getElementById('label7').innerText = 'of NU buildings and classrooms';
-          document.getElementById('label-1').innerText = 'Log in with your NU ID';
-          document.getElementById('label2').innerText = 'or';
-          document.getElementById('label-3').innerText = 'Log in as a guest';
-          document.getElementById('label4').innerText = '※Limited functionality';
-          document.getElementById('label8').innerText = 'English';
-
-        }
-      }
-
-      function button_click_monitor() {
-        if (document.getElementById('labelCode_1').value == '999') {
-          window.location.href = 'search2.html';
-        } else {
-          window.location.href = 'search.html';
-        }
-      }
-
-      function alert1() {
-        alert('Cas認証実装予定');
-      }
-      function alert2() {
-        alert('お問い合わせ機能実装予定');
-      }
-    </script>
-
-    <script>
-      <!-- service workerの登録関係
-      -->
-      if
-      ('serviceWorker'
-      in
-      navigator)
-      {
-      navigator.serviceWorker.register('service_worker.js').then(function (registration)
-      {
-      console.log('ServiceWorker
-      registratio
-      successful
-      with
-      scope:
-      ',
-      registration.scope);
-      }).catch(function (err)
-      {
-      console.log('ServiceWorker
-      registration
-      failed:
-      ',
-      err);
-      });
-      }
-    </script>
   </body>
   <footer style="height: 80px"></footer>
+
+  <script>
+    //言語切り替え関数
+    function testSelect() {
+      if (document.getElementById('labelCode_1').value == '999') {
+        document.getElementById('label8').innerText = 'English';
+        document.getElementById('labelCode_1').value = '000';
+        document.getElementById('label6').innerText = '名古屋大学の建物や教室の場所を';
+        document.getElementById('label7').innerText = '検索できるアプリです。';
+        document.getElementById('label-1').innerText = '名大IDでログイン';
+        document.getElementById('label2').innerText = 'もしくは';
+        document.getElementById('label-3').innerText = 'ログイン無しで利用';
+        document.getElementById('label4').innerText = '※機能制限あり';
+        document.getElementById('label8').innerText = '日本語';
+      } else {
+        document.getElementById('label8').innerText = '日本語';
+        document.getElementById('labelCode_1').value = '999';
+        document.getElementById('label6').innerText = 'allows you to search the locations';
+        document.getElementById('label7').innerText = 'of NU buildings and classrooms';
+        document.getElementById('label-1').innerText = 'Log in with your NU ID';
+        document.getElementById('label2').innerText = 'or';
+        document.getElementById('label-3').innerText = 'Log in as a guest';
+        document.getElementById('label4').innerText = '※Limited functionality';
+        document.getElementById('label8').innerText = 'English';
+
+      }
+    }
+
+    //言語切り替えによるリンク先の変化
+    function button_click_monitor() {
+      if (document.getElementById('labelCode_1').value == '999') {
+        window.location.href = 'search2.html';
+      } else {
+        window.location.href = 'search.html';
+      }
+    }
+
+    //未実装部分のalert()
+    function alert1() {
+      alert('Cas認証実装予定');
+    }
+    function alert2() {
+      alert('お問い合わせ機能実装予定');
+    }
+  </script>
+
+  <script>
+    //PWA関係
+    <!-- service workerの登録関係
+    -->
+    if
+    ('serviceWorker'
+    in
+    navigator)
+    {
+    navigator.serviceWorker.register('service_worker.js').then(function (registration)
+    {
+    console.log('ServiceWorker
+    registratio
+    successful
+    with
+    scope:
+    ',
+    registration.scope);
+    }).catch(function (err)
+    {
+    console.log('ServiceWorker
+    registration
+    failed:
+    ',
+    err);
+    });
+    }
+  </script>
 </html>

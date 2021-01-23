@@ -44,8 +44,8 @@
    /*ハンバーガーボタン*/
    .el_humburger {
      position: fixed;
-     top: 45px;
-     right: 60px;
+     top: 25px;
+     right: 40px;
      width: 46px;
      height: 50px;
      padding-top: 1px;
@@ -191,9 +191,9 @@
      margin-bottom: 28px;
      font-size: 20px;
      color: white;
-     font-family: "Marcellus", serif !important;
+    /* font-family: "Marcellus", serif !important;*/
      white-space: nowrap;
-     margin-left: 90px; }
+   /*margin-left: 90px;*/ }
      .navi_item.op_innerLink {
        cursor: pointer; }
      @media screen and (max-width: 840px) {
@@ -203,79 +203,80 @@
 
     </style>
 
-    <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous">
-    </script>
-    <script>
-    //変数定義
-    var navigationOpenFlag = false;
-    var navButtonFlag = true;
-    var focusFlag = false;
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+  </script>
+  <script>
+  //変数定義
+  var navigationOpenFlag = false;
+  var navButtonFlag = true;
+  var focusFlag = false;
 
-    //ハンバーガーメニュー
-        $(function(){
+  //ハンバーガーメニュー
+      $(function(){
 
-          $(document).on('click','.el_humburger',function(){
-            if(navButtonFlag){
-              spNavInOut.switch();
-              //一時的にボタンを押せなくする
-              setTimeout(function(){
-                navButtonFlag = true;
-              },200);
-              navButtonFlag = false;
-            }
-          });
-          $(document).on('click touchend', function(event) {
-            if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
-              focusFlag = false;
-              //scrollBlocker(false);
-              spNavInOut.switch();
-            }
-          });
+        $(document).on('click','.el_humburger',function(){
+          if(navButtonFlag){
+            spNavInOut.switch();
+            //一時的にボタンを押せなくする
+            setTimeout(function(){
+              navButtonFlag = true;
+            },200);
+            navButtonFlag = false;
+          }
         });
+        $(document).on('click touchend', function(event) {
+          if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+            focusFlag = false;
+            //scrollBlocker(false);
+            spNavInOut.switch();
+          }
+        });
+      });
 
-    //ナビ開く処理
-    function spNavIn(){
-      $('body').removeClass('js_humburgerClose');
-      $('body').addClass('js_humburgerOpen');
-      setTimeout(function(){
-        focusFlag = true;
-      },200);
-      setTimeout(function(){
-        navigationOpenFlag = true;
-      },200);
-    }
+  //ナビ開く処理
+  function spNavIn(){
+    $('body').removeClass('js_humburgerClose');
+    $('body').addClass('js_humburgerOpen');
+    setTimeout(function(){
+      focusFlag = true;
+    },200);
+    setTimeout(function(){
+      navigationOpenFlag = true;
+    },200);
+  }
 
-    //ナビ閉じる処理
-    function spNavOut(){
-      $('body').removeClass('js_humburgerOpen');
-      $('body').addClass('js_humburgerClose');
-      setTimeout(function(){
-        $(".uq_spNavi").removeClass("js_appear");
-        focusFlag = false;
-      },200);
-      navigationOpenFlag = false;
-    }
+  //ナビ閉じる処理
+  function spNavOut(){
+    $('body').removeClass('js_humburgerOpen');
+    $('body').addClass('js_humburgerClose');
+    setTimeout(function(){
+      $(".uq_spNavi").removeClass("js_appear");
+      focusFlag = false;
+    },200);
+    navigationOpenFlag = false;
+  }
 
-    //ナビ開閉コントロール
-    var spNavInOut = {
-      switch:function(){
-        if($('body.spNavFreez').length){
-          return false;
-        }
-        if($('body').hasClass('js_humburgerOpen')){
-         spNavOut();
-        } else {
-         spNavIn();
-        }
+  //ナビ開閉コントロール
+  var spNavInOut = {
+    switch:function(){
+      if($('body.spNavFreez').length){
+        return false;
       }
-    };
-    </script>
+      if($('body').hasClass('js_humburgerOpen')){
+       spNavOut();
+      } else {
+       spNavIn();
+      }
+    }
+  };
+  </script>
 
-  </head>
+</head>
 
+<header style="background-color: #4BACBB;"class="header_m">
   <div  class="el_humburger"><!--ハンバーガーボタン-->
      <div class="el_humburger_wrapper">
        <span class="el_humburger_bar top"></span>
@@ -283,40 +284,35 @@
        <span class="el_humburger_bar bottom"></span>
      </div>
    </div>
+    <div style="text-align:center;margin-top:-13px;">
+    <a href="javascript:history.back()">
+      <div id="back">
+        <img src="../images/icon/back-white.png" width="80%"/>
+      </div>
+    </a>
 
-
-
-    <header style="background-color: #4BACBB;">
-
-
-        <div style="text-align:center;">
-        <a href="javascript:history.back()">
-          <div id="back">
-            <img src="../images/icon/back-white.png" width="80%"/>
+        <div class="navi"><!--ナビゲーション-->
+          <div class="navi_inner">
+            <div class="navi_item"><a href="https://note.com/preview/n881c652750db?prev_access_key=2ab72860573152d63224650e95683a41">NU Mapsとは</a></div>
+            <div class="navi_item"><a href="index1.html">お問い合わせ</a></div>
+            <div class="navi_item"><a href="index.html">名大IDでログイン</a></div>
+            <div class="navi_item"><a href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></div>
           </div>
-        </a>
+        </div>
 
-            <div class="navi"><!--ナビゲーション-->
-              <div class="navi_inner">
-                <div class="navi_item"><a href="https://note.com/preview/n881c652750db?prev_access_key=2ab72860573152d63224650e95683a41">NU Mapsとは</a></div>
-                <div class="navi_item"><a href="index1.html">お問い合わせ</a></div>
-                <div class="navi_item"><a href="index.html">名大IDでログイン</a></div>
-                <div class="navi_item"><a href="http://www.nagoya-u.ac.jp/">名大公式ホームページ</a></div>
-              </div>
-            </div>
+          <div href="index.html" id="title1">
+            <img class="logo" src="../images/logo-text.png" width="130px;" height="30px;" />
+          </div>
+        </div>
 
-              <a href="index.html" id="title">
-                <img class="logo" src="../images/logo-text.png" width="125px;" height="30px;" />
-              </a>
-            </div>
+</header>
 
-  </header>
-
-    <body style="background-color: #4BACBB;font-size:22px;color:#fff;">
-    <div style="text-align: center;">
-    <div style="margin-top: 30px;">生協北部食堂</div>
-    <div style="margin-top: 4px;"></div>
-  </div>
+<body style="background-color: #4BACBB;font-size:22px;color:#fff;white-space: nowrap;">
+  <div style="text-align: center;margin-top:30px;">
+  <div>　</div>
+  <div>　</div>
+  <div style="margin-top: 0px;">生協北部食堂</div>
+</div>
   　
   <div class="gaikann">
   <div>外観　　　　　　　　 　　　　　　　</div>
