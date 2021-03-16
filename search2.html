@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" href="images/img.png" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="manifest" href="manifest.json" />
-    
+
     <script>
       //位置情報取得
       navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -42,7 +42,7 @@
       }
     </script>
   </head>
-
+<!--
   <header>
     <div id="back11">
       <div onclick="clickBtn2()">
@@ -70,6 +70,34 @@
       </div>
     </div>
   </header>
+-->
+<header>
+    <div id="back11">
+      <div onclick="clickBtn2()">
+        <div id="back">
+          <img src="images/icon/back-white.png" width="80%" />
+        </div>
+      </div>
+      <div class="navi">
+        <div class="navi_inner">
+          <div class="navi_item"><a href="https://note.com/preview/n881c652750db?prev_access_key=2ab72860573152d63224650e95683a41">About NU Maps</a></div>
+          <div class="navi_item"><a href="index1.html">Contact</a></div>
+          <div class="navi_item"><a href="index.html">Log in with NU ID</a></div>
+          <div class="navi_item"><a href="http://www.nagoya-u.ac.jp/">Nagoya University Official Website</a></div>
+        </div>
+      </div>
+      <a href="index.html" id="title">
+        <img class="logo" src="images/logo-text.png" width="125px;" height="30px;" />
+      </a>
+      <div  class="el_humburger">
+      <div class="el_humburger_wrapper">
+        <span class="el_humburger_bar top"></span>
+        <span class="el_humburger_bar middle"></span>
+        <span class="el_humburger_bar bottom"></span>
+      </div>
+      </div>
+    </div>
+</header>
 
   <body>
     <div id="header"></div>
@@ -97,21 +125,21 @@
       <div class="destination_selec">
         <select style="border-color: #bbb; border-radius: 8px;" id="building" class="custom-select">
           <option value="">Select building</option>
-          <option value="全学教育棟本館">全学教育棟本館</option>
-          <option value="愛知県名古屋市千種区宮東町 全学教育棟A館">全学教育棟A館</option>
-          <option value="名古屋大学 文系総合館">文系総合館</option>
-          <option value="名古屋大学附属図書館">名古屋大学附属図書館</option>
-          <option value="スターバックスコーヒー 名古屋大学附属図書館店">スターバックスコーヒー</option>
-          <option value="名古屋大学 生協北部食堂">生協北部食堂</option>
-          <option value="名古屋大学 生協南部書籍店">生協南部書籍店</option>
-          <option value="豊田講堂">豊田講堂</option>
-          <option value="名古屋大学 博物館">名古屋大学 博物館</option>
+          <option value="全学教育棟本館">Liberal Arts and Sciences Main Building</option>
+          <option value="愛知県名古屋市千種区宮東町 全学教育棟A館">Liberal Arts and Sciences Building A</option>
+          <option value="名古屋大学 文系総合館">Administrative Office</option>
+          <option value="名古屋大学附属図書館">NU Library</option>
+          <option value="スターバックスコーヒー 名古屋大学附属図書館店">Starbucks Coffee</option>
+          <option value="名古屋大学 生協北部食堂">NU CO-OP North - Cafeterias and Shops</option>
+          <option value="名古屋大学 生協南部書籍店">NU CO-OP South - Cafeterias and Shops</option>
+          <option value="豊田講堂">	Toyoda Auditorium</option>
+          <option value="名古屋大学 博物館">NU Museum</option>
           <option value="ナショナルイノベーションコンプレックス">NIC</option>
-          <option value="ファミリーマート 名古屋大学店">ファミリーマート 名古屋大学店</option>
-          <option value="名古屋大学内郵便局">名古屋大学内郵便局</option>
-          <option value="学生会館">学生会館</option>
-          <option value="ＩＢ電子情報館">ＩＢ電子情報館</option>
-          <option value="工学部1号館">工学部1号館</option>
+          <option value="ファミリーマート 名古屋大学店">Family Mart</option>
+          <option value="名古屋大学内郵便局">Post office</option>
+          <option value="学生会館">Student Hall</option>
+          <option value="ＩＢ電子情報館">IB Building</option>
+          <option value="工学部1号館">Building 1</option>
         </select>
       </div>
       <div class="room_selec">

@@ -11,6 +11,8 @@ function changeCategory() {   //建物名の選択肢が変更された際の動
   var changedCategory = building.value; //変更後の建物名を取得
   if (changedCategory == "全学教育棟本館") {
     setZengakukyoikuto();
+  }else if (changedCategory == "愛知県名古屋市千種区宮東町 全学教育棟A館") {
+    setZengakuA();
   } else {
     otherbuilding();
   }
@@ -34,15 +36,7 @@ function setZengakukyoikuto() { // 全学教育等の選択肢
     { cd: "C25", label: "C25" },
     { cd: "C30", label: "C30" },
     { cd: "C31", label: "C31" },
-    { cd: "C32", label: "C32" },
-    { cd: "C33", label: "C33" },
-    { cd: "C34", label: "C34" },
-    { cd: "C35", label: "C35" },
-    { cd: "C36", label: "C36" },
-    { cd: "C40", label: "C40" },
-    { cd: "C41", label: "C41" },
-    { cd: "C42", label: "C42" },
-    { cd: "C43", label: "C43" },
+
   ];
   rooms.forEach(function (value) {
     var op = document.createElement("option");
@@ -52,6 +46,31 @@ function setZengakukyoikuto() { // 全学教育等の選択肢
   });
 }
 
+function setZengakuA() { // 全学教育等の選択肢
+  room.textContent = null; //選択肢を空にする
+  var rooms = [ //選択肢
+    { cd: "", label: "選択して下さい" },
+    { cd: "A11", label: "A11" },
+    { cd: "A12", label: "A12" },
+    { cd: "A13", label: "A13" },
+    { cd: "A14", label: "A14" },
+    { cd: "A15", label: "A15" },
+    { cd: "A21", label: "A21" },
+    { cd: "A26", label: "A26" },
+    { cd: "A27", label: "A27" },
+    { cd: "A28", label: "A28" },
+    { cd: "A31", label: "A31" },
+    { cd: "A32", label: "A32" },
+    { cd: "A33", label: "A33" },
+    { cd: "A34", label: "A34" },
+  ];
+  rooms.forEach(function (value) {
+    var op = document.createElement("option");
+    op.value = value.cd;
+    op.text = value.label;
+    room.appendChild(op);
+  });
+}
 
 function otherbuilding() { //選択肢を空にする
   room.textContent = null;
@@ -290,9 +309,63 @@ if(room == "C10") {
       },
       map: map
     });
+    if(room == "A11") {
       var box = '<div class="box">' +
+            '<a href="asset/mapA11.html">建物内表示</a>' +
+        '</div>'
+      }else if(room == "A12"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA12.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A13"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA13.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A14"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA14.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A15"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA15.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A21"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA21.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A26"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA26.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A27"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA27.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A28"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA28.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A31"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA31.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A32"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA32.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A33"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA33.html">建物内表示</a>' +
+          '</div>'
+      }else if(room == "A34"){
+        var box = '<div class="box">' +
+              '<a href="asset/mapA34.html">建物内表示</a>' +
+          '</div>'
+      }else{
+        var box = '<div class="box">' +
             '<a href="asset/a.html">建物外観</a>' +
         '</div>'
+      }
       var infowindow = new google.maps.InfoWindow({
         content: box
       });
@@ -511,7 +584,7 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 }
 
@@ -526,7 +599,7 @@ function calculateAndDisplayRoute1(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }
@@ -542,7 +615,7 @@ function calculateAndDisplayRoute2(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }
@@ -558,7 +631,7 @@ function calculateAndDisplayRoute3(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }
@@ -574,7 +647,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute5(directionsService, directionsRenderer) {
@@ -588,7 +661,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute6(directionsService, directionsRenderer) {
@@ -602,7 +675,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute7(directionsService, directionsRenderer) {
@@ -616,7 +689,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute8(directionsService, directionsRenderer) {
@@ -630,7 +703,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute9(directionsService, directionsRenderer) {
@@ -644,7 +717,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute10(directionsService, directionsRenderer) {
@@ -658,7 +731,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute11(directionsService, directionsRenderer) {
@@ -672,7 +745,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute12(directionsService, directionsRenderer) {
@@ -686,7 +759,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute13(directionsService, directionsRenderer) {
@@ -700,7 +773,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute14(directionsService, directionsRenderer) {
@@ -714,7 +787,7 @@ function calculateAndDisplayRoute4(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }
@@ -730,7 +803,7 @@ function calculateAndDisplayRoute15(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }function calculateAndDisplayRoute16(directionsService, directionsRenderer) {
@@ -744,7 +817,7 @@ function calculateAndDisplayRoute15(directionsService, directionsRenderer) {
   }, function (response, status) {
     if (status === 'OK') {
       directionsRenderer.setDirections(response);
-    } 
+    }
   });
 
 }
@@ -983,12 +1056,12 @@ function calculateAndDisplayRoute15(directionsService, directionsRenderer) {
     console.log("Init current position")
     currentPosition = new google.maps.Circle({
       map: map,
-      radius: 2,	
-    	fillColor:"#00BFFF" , 		
-    	fillOpacity: 0.5,		
-    	strokeColor: "#00BFFF",	
-    	strokeOpacity: 1.0,	
-    	strokeWeight: 10		
+      radius: 2,
+    	fillColor:"#00BFFF" ,
+    	fillOpacity: 0.5,
+    	strokeColor: "#00BFFF",
+    	strokeOpacity: 1.0,
+    	strokeWeight: 10
     });
   }
 
@@ -1116,4 +1189,3 @@ function clickBtn2() {
     location.href = 'search.html';
   }
 }
-
