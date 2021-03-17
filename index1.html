@@ -27,19 +27,16 @@ body {
 
 <form action="php/mailform.php" method="post" id="mail_form">
 	<dl>
-		<dt>名前<span>Your Name</span></dt>
+		<dt>お名前<span>Your Name</span></dt>
 		<dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
 
-		<dt>ふりがな<span>Name Reading</span></dt>
-		<dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd>
-
-		<dt>メールアドレス<span>Mail Address</span></dt>
+		<dt>メールアドレス<span>E-mail</span></dt>
 		<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
 
-		<dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
+		<dt>メールアドレス<br />(確認用)<span>Confirm E-mail</span></dt>
 		<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
 
-		<dt>お問い合わせの種類<span>Inquiry Kind</span></dt>
+		<dt>お問い合わせの種類<span>Category</span></dt>
 		<dd class="required">
 			<ul>
 				<li><label><input type="checkbox" class="kind" name="kind[]" value="使い方について" />使い方について</label></li>
@@ -48,7 +45,7 @@ body {
 			</ul>
 		</dd>
 
-		<dt>お問い合わせの内容<span>Contents</span></dt>
+		<dt>お問い合わせの内容<span>Message</span></dt>
 		<dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
 	</dl>
 
