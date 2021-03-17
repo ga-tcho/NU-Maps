@@ -59,7 +59,7 @@
     //言語切り替え関数
     function testSelect() {
       if (document.getElementById('labelCode_1').value == '999') {
-        document.getElementById('label8').innerText = '日本語';
+        document.getElementById('label8').innerText = 'English';
         document.getElementById('labelCode_1').value = '000';
         document.getElementById('label6').innerText = '名古屋大学の建物や教室の場所を';
         document.getElementById('label7').innerText = '検索できるアプリです。';
@@ -67,9 +67,9 @@
         document.getElementById('label2').innerText = 'もしくは';
         document.getElementById('label-3').innerText = 'ログイン無しで利用';
         document.getElementById('label4').innerText = '※機能制限あり';
-        document.getElementById('label8').innerText = '日本語';
-      } else {
         document.getElementById('label8').innerText = 'English';
+      } else {
+        document.getElementById('label8').innerText = '日本語';
         document.getElementById('labelCode_1').value = '999';
         document.getElementById('label6').innerText = 'allows you to search the locations';
         document.getElementById('label7').innerText = 'of NU buildings and classrooms';
@@ -77,7 +77,7 @@
         document.getElementById('label2').innerText = 'or';
         document.getElementById('label-3').innerText = 'Log in as a guest';
         document.getElementById('label4').innerText = '※Limited functionality';
-        document.getElementById('label8').innerText = 'English';
+        document.getElementById('label8').innerText = '日本語';
 
       }
     }
