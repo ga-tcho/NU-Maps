@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="change_lang">
-      <div onClick="JavaScript:testSelect();"><img src="images/language.png" height="25px"width="25px;"> <div id="label8" style="margin-top:-25px;margin-left:29px;">English</div></div>
+      <div onClick="JavaScript:testSelect();"><img src="images/language.png" height="25px"width="25px;"> <div id="label8" style="margin-top:-25px;margin-left:29px;">日本語</div></div>
     </div>
   </body>
   <footer style="height: 80px"></footer>
@@ -59,7 +59,7 @@
     //言語切り替え関数
     function testSelect() {
       if (document.getElementById('labelCode_1').value == '999') {
-        document.getElementById('label8').innerText = 'English';
+        document.getElementById('label8').innerText = '日本語';
         document.getElementById('labelCode_1').value = '000';
         document.getElementById('label6').innerText = '名古屋大学の建物や教室の場所を';
         document.getElementById('label7').innerText = '検索できるアプリです。';
@@ -69,7 +69,7 @@
         document.getElementById('label4').innerText = '※機能制限あり';
         document.getElementById('label8').innerText = '日本語';
       } else {
-        document.getElementById('label8').innerText = '日本語';
+        document.getElementById('label8').innerText = 'English';
         document.getElementById('labelCode_1').value = '999';
         document.getElementById('label6').innerText = 'allows you to search the locations';
         document.getElementById('label7').innerText = 'of NU buildings and classrooms';
