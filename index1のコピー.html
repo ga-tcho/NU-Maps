@@ -24,32 +24,32 @@ body {
 </head>
 <body>
 
-<div style="text-align:center; font-size:25px; color:white;margin-top: 50px;">ご意見・お問い合わせフォーム</div>
+
 <form action="php/mailform.php" method="post" id="mail_form">
 	<dl>
-		<dt>お名前</dt>
-		<dd class="required"><input type="text" id="name_1" name="name_1" value="" placeholder="姓"/> <input type="text" id="name_2" name="name_2" value="" placeholder="名"/></dd>
+		<dt>お名前<span>Your Name</span></dt>
+		<dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
 
-		<dt>メールアドレス</dt>
+		<dt>メールアドレス<span>E-mail</span></dt>
 		<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
 
-		<dt>メールアドレス(確認用)</dt>
+		<dt>メールアドレス(確認用)<span>Confirm E-mail</span></dt>
 		<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
 
-		<dt>お問い合わせの種類</dt>
+		<dt>お問い合わせの種類<span>Category</span></dt>
 		<dd class="required">
 			<ul>
 				<li><label><input type="checkbox" class="kind" name="kind[]" value="使い方について" />使い方について</label></li>
-				<li><label><input type="checkbox" class="kind" name="kind[]" value="ご意見・ご要望" />ご意見・ご要望について</label></li>
+				<li><label><input type="checkbox" class="kind" name="kind[]" value="ご意見・ご要望" />ご意見・ご要望</label></li>
                 <li><label><input type="checkbox" class="kind" name="kind[]" value="その他" />その他</label></li>
 			</ul>
 		</dd>
 
-		<dt>お問い合わせの内容</dt>
+		<dt>お問い合わせの内容<span>Message</span></dt>
 		<dd class="required"><textarea id="contents" name="contents" cols="40" rows="5"></textarea></dd>
 	</dl>
 
-	<p id="form_submit"><input type="button" id="form_submit_button" value="送信" style="background-color: #288FA3; font-size:20px; border-radius: 9px; border-width:2px; border-color: #fff; padding: 6px 100px;margin-top: 10px; box-shadow:0 1px 2px gray"/></p>
+	<p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
 </form>
 
 
