@@ -37,7 +37,8 @@
         $('#log').val(String(position.coords.longitude));
       }
       function errorCallback(error) {
-        alert('Nagoya Univ. Sta. is set as the Starting Point.');
+        alert('Nagoya Univ. Sta. Exit 1 is set as the Starting Point.');
+        document.getElementById('starting_point').innerText = 'Nagoya Univ. Sta. Exit 1';
         $('#error').val('error');
       }
     </script>
@@ -73,7 +74,7 @@
 -->
 <header>
     <div id="back11">
-      <div onclick="clickBtn2()">
+      <div onclick="clickBtn3()">
         <div id="back">
           <img src="images/back_button.png" width="40%" />
         </div>
@@ -115,7 +116,7 @@
           id="start"
           name="building"
         >
-          <option value="名古屋大学駅">Present Location</option>
+          <option id="starting_point"value="名古屋大学駅">Present Location</option>
         </select>
       </div>
       <div class="destination"></div>
@@ -124,9 +125,9 @@
       </div>
       <div class="destination_selec">
         <select style="border-color: #bbb; border-radius: 8px;" id="building" class="custom-select">
-          <option value="">Select Building</option>
-          <option value="全学教育棟本館">Liberal Arts and Sciences Main Building</option>
-          <option value="愛知県名古屋市千種区宮東町 全学教育棟A館">Liberal Arts and Sciences Building A</option>
+          <option value="-">Select Building</option>
+          <option value="全学教育棟本館英語版">Liberal Arts and Sciences Main Building</option>
+          <option value="愛知県名古屋市千種区宮東町 全学教育棟A館英語版">Liberal Arts and Sciences Building A</option>
           <option value="名古屋大学 文系総合館">Administrative Office</option>
           <option value="名古屋大学附属図書館">NU Library</option>
           <option value="スターバックスコーヒー 名古屋大学附属図書館店">Starbucks Coffee</option>
@@ -144,7 +145,7 @@
       </div>
       <div class="room_selec">
         <select style="border-color: #bbb; border-radius: 8px;" class="custom-select" id="room" name="room">
-          <option value="">Select Room</option>
+          <option value="">ー</option>
         </select>
       </div>
       <div class="search">

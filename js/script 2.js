@@ -11,12 +11,8 @@ function changeCategory() {   //建物名の選択肢が変更された際の動
   var changedCategory = building.value; //変更後の建物名を取得
   if (changedCategory == "全学教育棟本館") {
     setZengakukyoikuto();
-  }else if (changedCategory == "全学教育棟本館英語版") {
-    setZengakukyoikutoen();
   }else if (changedCategory == "愛知県名古屋市千種区宮東町 全学教育棟A館") {
     setZengakuA();
-  }else if (changedCategory == "愛知県名古屋市千種区宮東町 全学教育棟A館英語版") {
-    setZengakuAen();
   } else {
     otherbuilding();
   }
@@ -25,35 +21,7 @@ function changeCategory() {   //建物名の選択肢が変更された際の動
 function setZengakukyoikuto() { // 全学教育等の選択肢
   room.textContent = null; //選択肢を空にする
   var rooms = [ //選択肢
-    { cd: "", label: "選択してください" },
-    { cd: "C10", label: "C10" },
-    { cd: "C11", label: "C11" },
-    { cd: "C12", label: "C12" },
-    { cd: "C13", label: "C13" },
-    { cd: "C14", label: "C14" },
-    { cd: "C15", label: "C15" },
-    { cd: "C20", label: "C20" },
-    { cd: "C21", label: "C21" },
-    { cd: "C22", label: "C22" },
-    { cd: "C23", label: "C23" },
-    { cd: "C24", label: "C24" },
-    { cd: "C25", label: "C25" },
-    { cd: "C30", label: "C30" },
-    { cd: "C31", label: "C31" },
-
-  ];
-  rooms.forEach(function (value) {
-    var op = document.createElement("option");
-    op.value = value.cd;
-    op.text = value.label;
-    room.appendChild(op);
-  });
-}
-
-function setZengakukyoikutoen() { // 全学教育等の選択肢
-  room.textContent = null; //選択肢を空にする
-  var rooms = [ //選択肢
-    { cd: "", label: "Select Room" },
+    { cd: "", label: "選択して下さい" },
     { cd: "C10", label: "C10" },
     { cd: "C11", label: "C11" },
     { cd: "C12", label: "C12" },
@@ -81,7 +49,7 @@ function setZengakukyoikutoen() { // 全学教育等の選択肢
 function setZengakuA() { // 全学教育等の選択肢
   room.textContent = null; //選択肢を空にする
   var rooms = [ //選択肢
-    { cd: "", label: "選択してください" },
+    { cd: "", label: "選択して下さい" },
     { cd: "A11", label: "A11" },
     { cd: "A12", label: "A12" },
     { cd: "A13", label: "A13" },
@@ -103,31 +71,7 @@ function setZengakuA() { // 全学教育等の選択肢
     room.appendChild(op);
   });
 }
-function setZengakuAen() { // 全学教育等の選択肢
-  room.textContent = null; //選択肢を空にする
-  var rooms = [ //選択肢
-    { cd: "", label: "Select Room" },
-    { cd: "A11", label: "A11" },
-    { cd: "A12", label: "A12" },
-    { cd: "A13", label: "A13" },
-    { cd: "A14", label: "A14" },
-    { cd: "A15", label: "A15" },
-    { cd: "A21", label: "A21" },
-    { cd: "A26", label: "A26" },
-    { cd: "A27", label: "A27" },
-    { cd: "A28", label: "A28" },
-    { cd: "A31", label: "A31" },
-    { cd: "A32", label: "A32" },
-    { cd: "A33", label: "A33" },
-    { cd: "A34", label: "A34" },
-  ];
-  rooms.forEach(function (value) {
-    var op = document.createElement("option");
-    op.value = value.cd;
-    op.text = value.label;
-    room.appendChild(op);
-  });
-}
+
 function otherbuilding() { //選択肢を空にする
   room.textContent = null;
   var rooms = [ //選択肢
@@ -173,11 +117,7 @@ var end = document.getElementById('building').value;
 //現在地から建物までのルーティング
 if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
   calculateAndDisplayRoute2(directionsService, directionsRenderer);
-}else if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館英語版"){
-  calculateAndDisplayRoute2(directionsService, directionsRenderer);
 }else if(end == "全学教育棟本館"){
-  calculateAndDisplayRoute3(directionsService, directionsRenderer);
-}else if(end == "全学教育棟本館英語版"){
   calculateAndDisplayRoute3(directionsService, directionsRenderer);
 }else if(end == "名古屋大学 文系総合館"){
   calculateAndDisplayRoute4(directionsService, directionsRenderer);
@@ -209,11 +149,7 @@ if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
 //名大駅から建物までのルーティング
 if(error == "error" && end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
   calculateAndDisplayRoute2e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "愛知県名古屋市千種区宮東町 全学教育棟A館英語版"){
-  calculateAndDisplayRoute2e(directionsService, directionsRenderer);
 }else if(error == "error" && end == "全学教育棟本館"){
-  calculateAndDisplayRoute3e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "全学教育棟本館英語版"){
   calculateAndDisplayRoute3e(directionsService, directionsRenderer);
 }else if(error == "error" && end == "名古屋大学 文系総合館"){
   calculateAndDisplayRoute4e(directionsService, directionsRenderer);
@@ -365,117 +301,7 @@ if(room == "C10") {
       content: box
     });
     infowindow.open(map, marker);
-  }else if(end == "全学教育棟本館英語版"){
-    marker = new google.maps.Marker({
-      position: {
-        lat: 35.154364,
-        lng: 136.962709
-      },
-      map: map
-    });
-    if(room == "C10") {
-      var box = '<div class="box">' +
-            '<a href="asset/mapC10.html">Building Map</a>' +
-        '</div>'
-      } else if (room == "C11"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC11.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C12"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC12.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C13"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC13.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C14"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC14.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C15"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC15.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C20"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC20.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C21"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC21.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C22"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC22.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C23"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC23.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C24"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC24.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C25"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC25.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C30"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC30.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C31"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC31.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C32"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC32.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C33"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC33.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C34"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC34.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C35"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC35.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C36"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC36.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C40"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC40.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C41"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC41.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C42"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC42.html">Building Map</a>' +
-        '</div>'
-      }else if (room == "C43"){
-      var box = '<div class="box">' +
-            '<a href="asset/mapC43.html">Building Map</a>' +
-        '</div>'
-      }else{
-      var box = '<div class="box">' +
-              '<a href="asset/map.html">Building Map</a>' +
-          '</div>'
-    
-      }
-        var infowindow = new google.maps.InfoWindow({
-          content: box
-        });
-        infowindow.open(map, marker);
-      }else if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
+  }else if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
     marker = new google.maps.Marker({
       position: {
         lat: 35.154984,
@@ -534,75 +360,6 @@ if(room == "C10") {
       }else if(room == "A34"){
         var box = '<div class="box">' +
               '<a href="asset/mapA34.html">建物内表示</a>' +
-          '</div>'
-      }else{
-        var box = '<div class="box">' +
-            '<a href="asset/a.html">建物外観</a>' +
-        '</div>'
-      }
-      var infowindow = new google.maps.InfoWindow({
-        content: box
-      });
-      infowindow.open(map, marker);
-  }else if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館英語版"){
-    marker = new google.maps.Marker({
-      position: {
-        lat: 35.154984,
-        lng: 136.962147
-      },
-      map: map
-    });
-    if(room == "A11") {
-      var box = '<div class="box">' +
-            '<a href="asset/mapA11.html">Building Map</a>' +
-        '</div>'
-      }else if(room == "A12"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA12.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A13"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA13.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A14"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA14.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A15"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA15.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A21"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA21.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A26"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA26.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A27"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA27.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A28"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA28.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A31"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA31.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A32"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA32.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A33"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA33.html">Building Map</a>' +
-          '</div>'
-      }else if(room == "A34"){
-        var box = '<div class="box">' +
-              '<a href="asset/mapA34.html">Building Map</a>' +
           '</div>'
       }else{
         var box = '<div class="box">' +
@@ -1412,7 +1169,7 @@ function clickBtn1() {
   if (end == '') {
     alert('目的地が選択されていません。');
   } else if (end == '-') {
-    alert('Destination is unselected.');
+    alert('No destination selected');
   } else {
     if (p1.style.display == 'block') {
       // noneで非表示
@@ -1430,13 +1187,5 @@ function clickBtn2() {
     location.href = 'index.html';
   } else {
     location.href = 'search.html';
-  }
-}
-function clickBtn3() {
-  const p1 = document.getElementById('floating-panel');
-  if (p1.style.display == 'block') {
-    location.href = 'index.html';
-  } else {
-    location.href = 'search2.html';
   }
 }

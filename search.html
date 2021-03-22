@@ -37,7 +37,8 @@
         $('#log').val(String(position.coords.longitude));
       }
       function errorCallback(error) {
-        alert('名古屋大学駅を始点にします');
+        alert('名古屋大学駅１番出口を出発地に設定します');
+        document.getElementById('starting_point').innerText = '名古屋大学駅１番出口';
         $('#error').val('error');
       }
     </script>
@@ -87,7 +88,7 @@
           id="start"
           name="building"
         >
-          <option value="名古屋大学駅">現在地</option>
+          <option id='starting_point' value="名古屋大学駅">現在地</option>
         </select>
       </div>
       <div class="destination"></div>
@@ -116,7 +117,7 @@
       </div>
       <div class="room_selec">
         <select style="border-color: #bbb; border-radius: 8px;" class="custom-select" id="room" name="room">
-          <option value="">部屋名を選択してください</option>
+          <option value="">ー</option>
         </select>
       </div>
       <div class="search">
