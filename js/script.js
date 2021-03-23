@@ -205,6 +205,32 @@ if(end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
   calculateAndDisplayRoute15(directionsService, directionsRenderer);
 }else if(end == "工学部1号館"){
   calculateAndDisplayRoute16(directionsService, directionsRenderer);
+}else if(end == "名古屋大学 文系総合館英語版"){
+  calculateAndDisplayRoute4(directionsService, directionsRenderer);
+}else if(end == "名古屋大学附属図書館英語版"){
+  calculateAndDisplayRoute5(directionsService, directionsRenderer);
+}else if(end == "スターバックスコーヒー 名古屋大学附属図書館店英語版"){
+  calculateAndDisplayRoute6(directionsService, directionsRenderer);
+}else if(end == "名古屋大学 生協北部食堂英語版"){
+  calculateAndDisplayRoute7(directionsService, directionsRenderer);
+}else if(end == "名古屋大学 生協南部書籍店英語版"){
+  calculateAndDisplayRoute8(directionsService, directionsRenderer);
+}else if(end == "豊田講堂英語版"){
+  calculateAndDisplayRoute9(directionsService, directionsRenderer);
+}else if(end == "名古屋大学 博物館英語版"){
+  calculateAndDisplayRoute10(directionsService, directionsRenderer);
+}else if(end == "ナショナルイノベーションコンプレックス英語版"){
+  calculateAndDisplayRoute11(directionsService, directionsRenderer);
+}else if(end == "ファミリーマート 名古屋大学店英語版"){
+  calculateAndDisplayRoute12(directionsService, directionsRenderer);
+}else if(end == "名古屋大学内郵便局英語版"){
+  calculateAndDisplayRoute13(directionsService, directionsRenderer);
+}else if(end == "学生会館英語版"){
+  calculateAndDisplayRoute14(directionsService, directionsRenderer);
+}else if(end == "ＩＢ電子情報館英語版"){
+  calculateAndDisplayRoute15(directionsService, directionsRenderer);
+}else if(end == "工学部1号館英語版"){
+  calculateAndDisplayRoute16(directionsService, directionsRenderer);
 }
 //名大駅から建物までのルーティング
 if(error == "error" && end == "愛知県名古屋市千種区宮東町 全学教育棟A館"){
@@ -215,33 +241,60 @@ if(error == "error" && end == "愛知県名古屋市千種区宮東町 全学教
   calculateAndDisplayRoute3e(directionsService, directionsRenderer);
 }else if(error == "error" && end == "全学教育棟本館英語版"){
   calculateAndDisplayRoute3e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "名古屋大学 文系総合館"){
+}else if(error == "error" && end == "名古屋大学 文系総合館英語版"){
   calculateAndDisplayRoute4e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "名古屋大学附属図書館"){
+}else if(error == "error" && end == "名古屋大学附属図書館英語版"){
   calculateAndDisplayRoute5e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "スターバックスコーヒー 名古屋大学附属図書館店"){
+}else if(error == "error" && end == "スターバックスコーヒー 名古屋大学附属図書館店英語版"){
   calculateAndDisplayRoute6e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "名古屋大学 生協北部食堂"){
+}else if(error == "error" && end == "名古屋大学 生協北部食堂英語版"){
   calculateAndDisplayRoute7e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "名古屋大学 生協南部書籍店"){
+}else if(error == "error" && end == "名古屋大学 生協南部書籍店英語版"){
   calculateAndDisplayRoute8e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "豊田講堂"){
+}else if(error == "error" && end == "豊田講堂英語版"){
   calculateAndDisplayRoute9e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "名古屋大学 博物館"){
+}else if(error == "error" && end == "名古屋大学 博物館英語版"){
   calculateAndDisplayRoute10e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "ナショナルイノベーションコンプレックス"){
+}else if(error == "error" && end == "ナショナルイノベーションコンプレックス英語版"){
   calculateAndDisplayRoute11e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "ファミリーマート 名古屋大学店"){
+}else if(error == "error" && end == "ファミリーマート 名古屋大学店英語版"){
   calculateAndDisplayRoute12e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "名古屋大学内郵便局"){
+}else if(error == "error" && end == "名古屋大学内郵便局英語版"){
   calculateAndDisplayRoute13e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "学生会館"){
+}else if(error == "error" && end == "学生会館英語版"){
   calculateAndDisplayRoute14e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "ＩＢ電子情報館"){
+}else if(error == "error" && end == "ＩＢ電子情報館英語版"){
   calculateAndDisplayRoute15e(directionsService, directionsRenderer);
-}else if(error == "error" && end == "工学部1号館"){
+}else if(error == "error" && end == "工学部1号館英語版"){
+  calculateAndDisplayRoute16(directionsService, directionsRenderer);
+}else if(error == "error" && end == "名古屋大学 文系総合館英語版"){
+  calculateAndDisplayRoute4e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "名古屋大学附属図書館英語版"){
+  calculateAndDisplayRoute5e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "スターバックスコーヒー 名古屋大学附属図書館店英語版"){
+  calculateAndDisplayRoute6e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "名古屋大学 生協北部食堂英語版"){
+  calculateAndDisplayRoute7e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "名古屋大学 生協南部書籍店英語版"){
+  calculateAndDisplayRoute8e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "豊田講堂英語版"){
+  calculateAndDisplayRoute9e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "名古屋大学 博物館英語版"){
+  calculateAndDisplayRoute10e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "ナショナルイノベーションコンプレックス英語版"){
+  calculateAndDisplayRoute11e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "ファミリーマート 名古屋大学店英語版"){
+  calculateAndDisplayRoute12e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "名古屋大学内郵便局英語版"){
+  calculateAndDisplayRoute13e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "学生会館英語版"){
+  calculateAndDisplayRoute14e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "ＩＢ電子情報館英語版"){
+  calculateAndDisplayRoute15e(directionsService, directionsRenderer);
+}else if(error == "error" && end == "工学部1号館英語版"){
   calculateAndDisplayRoute16(directionsService, directionsRenderer);
 }
+
 
 // 現在地の表示のための初期化
 initCurrentPosition();
@@ -379,95 +432,95 @@ if(room == "C10") {
         '</div>'
       } else if (room == "C11"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC11.html">Building Map</a>' +
+            '<a href="asset/mapC11_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C12"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC12.html">Building Map</a>' +
+            '<a href="asset/mapC12_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C13"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC13.html">Building Map</a>' +
+            '<a href="asset/mapC13_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C14"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC14.html">Building Map</a>' +
+            '<a href="asset/mapC14_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C15"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC15.html">Building Map</a>' +
+            '<a href="asset/mapC15_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C20"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC20.html">Building Map</a>' +
+            '<a href="asset/mapC20_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C21"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC21.html">Building Map</a>' +
+            '<a href="asset/mapC21_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C22"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC22.html">Building Map</a>' +
+            '<a href="asset/mapC22_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C23"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC23.html">Building Map</a>' +
+            '<a href="asset/mapC23_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C24"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC24.html">Building Map</a>' +
+            '<a href="asset/mapC24_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C25"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC25.html">Building Map</a>' +
+            '<a href="asset/mapC25_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C30"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC30.html">Building Map</a>' +
+            '<a href="asset/mapC30_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C31"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC31.html">Building Map</a>' +
+            '<a href="asset/mapC31_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C32"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC32.html">Building Map</a>' +
+            '<a href="asset/mapC32_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C33"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC33.html">Building Map</a>' +
+            '<a href="asset/mapC33_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C34"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC34.html">Building Map</a>' +
+            '<a href="asset/mapC34_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C35"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC35.html">Building Map</a>' +
+            '<a href="asset/mapC35_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C36"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC36.html">Building Map</a>' +
+            '<a href="asset/mapC36_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C40"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC40.html">Building Map</a>' +
+            '<a href="asset/mapC40_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C41"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC41.html">Building Map</a>' +
+            '<a href="asset/mapC41_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C42"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC42.html">Building Map</a>' +
+            '<a href="asset/mapC42_en.html">Building Map</a>' +
         '</div>'
       }else if (room == "C43"){
       var box = '<div class="box">' +
-            '<a href="asset/mapC43.html">Building Map</a>' +
+            '<a href="asset/mapC43_en.html">Building Map</a>' +
         '</div>'
       }else{
       var box = '<div class="box">' +
-              '<a href="asset/map.html">Building Map</a>' +
+              '<a href="asset/map_en.html">Building Map</a>' +
           '</div>'
 
       }
@@ -554,59 +607,59 @@ if(room == "C10") {
     });
     if(room == "A11") {
       var box = '<div class="box">' +
-            '<a href="asset/mapA11.html">Building Map</a>' +
+            '<a href="asset/mapA11_en.html">Building Map</a>' +
         '</div>'
       }else if(room == "A12"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA12.html">Building Map</a>' +
+              '<a href="asset/mapA12_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A13"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA13.html">Building Map</a>' +
+              '<a href="asset/mapA13_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A14"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA14.html">Building Map</a>' +
+              '<a href="asset/mapA14_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A15"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA15.html">Building Map</a>' +
+              '<a href="asset/mapA15_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A21"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA21.html">Building Map</a>' +
+              '<a href="asset/mapA21_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A26"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA26.html">Building Map</a>' +
+              '<a href="asset/mapA26_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A27"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA27.html">Building Map</a>' +
+              '<a href="asset/mapA27_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A28"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA28.html">Building Map</a>' +
+              '<a href="asset/mapA28_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A31"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA31.html">Building Map</a>' +
+              '<a href="asset/mapA31_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A32"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA32.html">Building Map</a>' +
+              '<a href="asset/mapA32_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A33"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA33.html">Building Map</a>' +
+              '<a href="asset/mapA33_en.html">Building Map</a>' +
           '</div>'
       }else if(room == "A34"){
         var box = '<div class="box">' +
-              '<a href="asset/mapA34.html">Building Map</a>' +
+              '<a href="asset/mapA34_en.html">Building Map</a>' +
           '</div>'
       }else{
         var box = '<div class="box">' +
-            '<a href="asset/a.html">建物外観</a>' +
+            '<a href="asset/a_en.html">Building Map</a>' +
         '</div>'
       }
       var infowindow = new google.maps.InfoWindow({
@@ -805,6 +858,203 @@ if(room == "C10") {
     });
       var box = '<div class="box">' +
             '<a href="asset/kou_1.html">建物外観</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "名古屋大学 文系総合館英語版"){//英語版ーーーーーー
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.153985,
+        lng: 136.964197
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/sougoukann_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "名古屋大学附属図書館英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.154903,
+        lng: 136.964121
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/toshokann_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "スターバックスコーヒー 名古屋大学附属図書館店英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.154903,
+        lng: 136.964121
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/sutaba_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "名古屋大学 生協北部食堂英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.156664,
+        lng: 136.965586
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/hokubu_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "名古屋大学 生協南部書籍店英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.153227,
+        lng: 136.962995
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/nannbu_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "豊田講堂英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.153437,
+        lng: 136.967830
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/toyota_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "名古屋大学 博物館英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.153183,
+        lng: 136.966964
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/hakubutukann_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "ナショナルイノベーションコンプレックス英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.155496,
+        lng: 136.966932
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/nic_en.html">Building Map</a>' +
+        '</div>'
+
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "ファミリーマート 名古屋大学店英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.154084,
+        lng: 136.963135
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/famima_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "名古屋大学内郵便局英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.154921,
+        lng: 136.966842
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/yuubinn_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "学生会館英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.157174,
+        lng: 136.965849
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/kaikann_en.html">Building Map</a>' +
+        '</div>'
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "ＩＢ電子情報館英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.154934,
+        lng: 136.965784
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/ib_en.html">Building Map</a>' +
+        '</div>'
+
+      var infowindow = new google.maps.InfoWindow({
+        content: box
+      });
+      infowindow.open(map, marker);
+  }else if(end == "工学部1号館英語版"){
+    marker = new google.maps.Marker({
+      position: {
+        lat: 35.156470,
+        lng: 136.964536
+      },
+      map: map
+    });
+      var box = '<div class="box">' +
+            '<a href="asset/kou_1_en.html">Building Map</a>' +
         '</div>'
       var infowindow = new google.maps.InfoWindow({
         content: box
