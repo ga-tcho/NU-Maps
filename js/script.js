@@ -375,7 +375,7 @@ if(room == "C10") {
     });
     if(room == "C10") {
       var box = '<div class="box">' +
-            '<a href="asset/mapC10.html">Building Map</a>' +
+            '<a href="asset/mapC10_en.html">Building Map</a>' +
         '</div>'
       } else if (room == "C11"){
       var box = '<div class="box">' +
@@ -469,7 +469,7 @@ if(room == "C10") {
       var box = '<div class="box">' +
               '<a href="asset/map.html">Building Map</a>' +
           '</div>'
-    
+
       }
         var infowindow = new google.maps.InfoWindow({
           content: box
@@ -1403,7 +1403,7 @@ function calculateAndDisplayRoute15(directionsService, directionsRenderer) {
 
 
 
-//---------floating-panelの表示処理（search.html）----------------------------
+//---------floating-panelの表示処理（search.html）----------------------------------------
 document.getElementById('floating-panel').style.display = 'block';
 
 function clickBtn1() {
